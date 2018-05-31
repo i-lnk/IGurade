@@ -291,6 +291,7 @@
     <string name="tips_version">A new system version was found.\r\n The latest system gives you a better application</string>
     <string name="update_success">Upgrade successfully, need to re-configure WiFi</string>
     <string name="update_failed">Upgrade failed</string>
+    <string name="update_failed_by_low_power">Low power,can\'t upgrade now.</string>
 
     <string name="pir">Sensitivity</string>
 

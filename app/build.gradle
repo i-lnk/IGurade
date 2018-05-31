@@ -36,7 +36,7 @@ android {
         targetSdkVersion 27
         applicationId "com.rl.geye"
         versionCode 71
-        versionName "1.7.3"
+        versionName "1.7.4"
         multiDexEnabled true
 
         ndk {

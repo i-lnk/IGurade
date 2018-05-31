@@ -293,6 +293,7 @@
     <string name="tips_version">发现新版设备系统\r\n最新的系统给您更好的应用</string>
     <string name="update_success">升级成功,需要重新配置WIFI</string>
     <string name="update_failed">升级失败</string>
+    <string name="update_failed_by_low_power">电量不足，无法升级！！</string>
 
     <!-- 移动侦测 -->
     <string name="mode_night">夜间模式</string>

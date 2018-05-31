@@ -855,12 +855,11 @@ public class MainAty extends BaseMyAty implements
         //判断是否是AndroidN以及更高的版本
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
 
-            Uri contentUri = FileProvider.getUriForFile(mContext, BuildConfig.APPLICATION_ID + ".fileProvider", file);
+//          Uri contentUri = FileProvider.getUriForFile(mContext, BuildConfig.APPLICATION_ID + ".fileProvider", file);
+            Uri contentUri = Uri.fromFile(file);
 
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-
             intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-
             intent.setDataAndType(contentUri, "application/vnd.android.package-archive");
 
         } else {

@@ -42,6 +42,7 @@ import com.rl.geye.ui.dlg.ChooseDataDialog;
 import com.rl.geye.ui.dlg.PhotoChooseDialog;
 import com.rl.geye.util.PhotoVideoUtil;
 import com.rl.geye.util.SnackbarUtil;
+import com.rl.p2plib.bean.Battery;
 import com.rl.p2plib.bean.DetectInfo;
 import com.rl.p2plib.bean.DevSysSet;
 import com.rl.p2plib.bean.DevTimeZone;
@@ -99,6 +100,7 @@ public class SetDevNormalFrag extends BaseP2PFrag implements UITableView.TableCl
     private CustomTableItem itemRestore;
     private CustomTableItem itemRestart;
     private CustomTableItem itemSystem;
+    private Battery mBattery = null;
     private PowerData mPowerData;
     private VoiceData mVoiceData;
     private DetectInfo mDetectInfo;
@@ -616,12 +618,12 @@ public class SetDevNormalFrag extends BaseP2PFrag implements UITableView.TableCl
         itemSystem.setBgEnabled(isOnline);
 
         if (isOnline) {
+            getDevBattery();
             getDevSys();
             getDetect();
             if (isAutoRecordEnabled) {
                 getAutoRecord();
             }
-
             getSysSet();
             getDevTimeZone();
             getPower();
@@ -737,6 +739,13 @@ public class SetDevNormalFrag extends BaseP2PFrag implements UITableView.TableCl
                     mSysSet = sysSet;
 //                    mOrigSysSet = (DevSysSet) mSysSet.clone();
                     mHandler.sendEmptyMessage(R.id.msg_update_language);
+                }
+            }
+
+            @Override
+            public void onGetBattery(String did, int msgType, Battery battery) {
+                if (isSameDevice(did)) {
+                    mBattery = battery;
                 }
             }
 
@@ -1018,6 +1027,10 @@ public class SetDevNormalFrag extends BaseP2PFrag implements UITableView.TableCl
         ApiMgrV2.getDevSys(mDevice.getDevId());
     }
 
+    private void getDevBattery(){
+        ApiMgrV2.getBattery(mDevice.getDevId(), null, -1);
+    }
+
 
     /**
      * 获取设备系统设置
@@ -1057,6 +1070,10 @@ public class SetDevNormalFrag extends BaseP2PFrag implements UITableView.TableCl
 
 
     private void executeUpdate() {
+        if(mBattery == null || mBattery.getBattery() < 20){
+            MyApp.showToast(R.string.update_failed_by_low_power);
+            return;
+        }
 
         ApiMgrV2.updateDevSys(mDevice.getDevId(), mSysVersion);
         isUpdating = true;
