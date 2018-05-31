@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- 2个控件用于计算宽度 -->
+        <LinearLayout
+            android:id="@+id/bg_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:gravity="center_vertical"
+            android:minWidth="140dip"
+            android:orientation="horizontal"
+            android:paddingLeft="20dip"
+            android:paddingRight="20dip"
+            android:visibility="invisible">
+
+            <TextView
+                android:id="@+id/tv_name"
+                style="@style/text_common"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:text="@string/resolution_m"
+                android:textSize="@dimen/text_16" />
+
+            <ImageView
+                android:id="@+id/icon_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dip"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_choose_small_selector" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/bg_item"
+            android:layout_alignRight="@+id/bg_item"
+            android:background="@drawable/bg_popup_3"
+            android:minHeight="143dip">
+
+            <ListView
+                android:id="@+id/list_menus_down"
+                style="@style/listView_common"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dip"
+                android:layout_marginTop="10dip"
+                android:divider="#666666"
+                android:dividerHeight="0.8dip" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- 2个控件用于计算宽度 -->
+        <LinearLayout
+            android:id="@+id/bg_item_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:gravity="center_vertical"
+            android:minWidth="140dip"
+            android:orientation="horizontal"
+            android:paddingLeft="20dip"
+            android:paddingRight="20dip"
+            android:visibility="invisible">
+
+            <TextView
+                android:id="@+id/tv_name_2"
+                style="@style/text_common"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:text="@string/resolution_m"
+                android:textSize="@dimen/text_16" />
+
+            <ImageView
+                android:id="@+id/icon_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dip"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_choose_small_selector" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/bg_item_2"
+            android:layout_alignRight="@+id/bg_item_2"
+            android:background="@drawable/bg_popup_2"
+            android:visibility="gone">
+
+            <ListView
+                android:id="@+id/list_menus_up"
+                style="@style/listView_common"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="#666666"
+                android:dividerHeight="0.8dip"
+                android:paddingBottom="10dip"
+                android:paddingTop="6dip" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

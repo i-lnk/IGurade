@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xEdit="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@drawable/bg_corner"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="20dip"
+            android:paddingRight="20dip">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:src="@mipmap/a0_user" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/ly_user"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_user">
+
+                <com.nicky.framework.widget.XEditText
+                    android:id="@+id/et_user"
+                    style="@style/edit_common"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/input_view_height"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginTop="5dip"
+                    android:digits="@string/register_name_digits"
+                    android:drawableRight="@drawable/ic_clear_selector"
+                    android:paddingLeft="6dip"
+                    android:textColorHint="@color/text_hint"
+                    android:textSize="@dimen/text_16"
+                    xEdit:noEmoji="true"
+                    xEdit:rightIconType="cleanContent" />
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="18dip"
+            android:layout_marginTop="15dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="20dip"
+            android:paddingRight="20dip">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:src="@mipmap/a0_pwd" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/ly_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_pwd">
+
+                <com.nicky.framework.widget.XEditText
+                    android:id="@+id/et_pwd"
+                    style="@style/edit_common"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/input_view_height"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginTop="5dip"
+                    android:digits="@string/register_name_digits"
+                    android:drawableRight="@drawable/ic_show_pwd_selector"
+                    android:inputType="textPassword"
+                    android:paddingLeft="6dip"
+                    android:textColorHint="@color/text_hint"
+                    android:textSize="@dimen/text_16"
+                    xEdit:noEmoji="true"
+                    xEdit:rightIconType="showPassword" />
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_height"
+            android:background="@color/divider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/input_view_height"
+                android:layout_weight="1"
+                android:background="@drawable/bg_corner_white_left_bottom"
+                android:text="@string/str_cancel"
+                android:textAllCaps="false"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/text_16" />
+
+            <FrameLayout
+                android:layout_width="@dimen/divider_height"
+                android:layout_height="match_parent"
+                android:background="@color/divider" />
+
+            <Button
+                android:id="@+id/btn_ok"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/input_view_height"
+                android:layout_weight="1"
+                android:background="@drawable/bg_corner_white_right_bottom"
+                android:text="@string/str_ok"
+                android:textAllCaps="false"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/text_16" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

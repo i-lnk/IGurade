@@ -1,0 +1,406 @@
+<resources>
+    <string name="app_name">IGuarder</string>
+
+    <string name="str_cancel">取消</string>
+    <string name="str_ok">确定</string>
+    <string name="str_apply">应用</string>
+    <string name="time_out">超时</string>
+    <string name="str_delete">删除</string>
+    <string name="permission_title_rationale">权限申请</string>
+    <string name="permission_read_storage_rationale">当前操作需要申请读取SD卡权限</string>
+    <string name="permission_write_storage_rationale">当前操作需要申请写入SD卡权限</string>
+    <string name="permission_read_write_storage_rationale">当前操作需要申请读写SD卡权限</string>
+    <string name="permission_camera_rationale">当前操作需要申请照相机权限</string>
+    <string name="tips_data_get_failed">%1$s获取失败</string>
+    <string name="tips_data_set_failed">%1$s设置失败</string>
+    <string name="register_name_digits"> ._0123456789 abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLIMNOPQRSTUVWXYZ</string>
+
+    <!-- 首页 -->
+    <string name="tips_launcher">轻松看好您的家</string>
+    <string name="tips_welcome_to_use">欢迎使用%1$s</string>
+    <string name="str_device">设备</string>
+    <string name="str_record">记录</string>
+    <string name="str_message">信息</string>
+    <string name="str_settings">设置</string>
+    <string name="synchronizing_data">正在同步数据...</string>
+
+    <!-- 我的设备 -->
+    <string name="title_device">我的设备</string>
+    <string name="pppp_status_invalid_id">ID号无效</string>
+    <string name="pppp_status_initialing">已连接，正在初始化</string>
+    <string name="pppp_status_connect_not_allow">连接数已满</string>
+    <string name="pppp_status_unknown">未知状态</string>
+    <string name="pppp_status_connecting">正在连接</string>
+    <string name="pppp_status_online">在线</string>
+    <string name="pppp_status_disconnect">离线</string>
+    <string name="pppp_status_connect_failed">连接失败</string>
+    <string name="pppp_status_connect_timeout">连接超时</string>
+    <string name="pppp_status_user_not_login">用户尚未登录</string>
+    <string name="pppp_status_err_user_pwd">用户名或密码错误</string>
+    <string name="pppp_status_connect_user_login">该用户已在其他手机端连接设备</string>
+    <string name="pppp_status_err_pwd">密码错误</string>
+    <string name="pppp_status_sleep">待机</string>
+    <string name="hint_user">请输入用户名</string>
+    <string name="hint_pwd">请输入密码</string>
+    <string name="hint_dev_connecting">正在连接,请稍候...</string>
+    <string name="Disconnected">网络不给力，请检查网络设置。</string>
+    <string name="hint_dev_offline">设备不在线!</string>
+    <string name="tips_del_dev">确定要删除该设备?</string>
+
+    <!-- 记录 -->
+    <string name="tips_empty_photo">暂无图片</string>
+    <string name="tips_empty_video">暂无视频</string>
+    <string name="tips_empty_record">暂无记录</string>
+    <string name="str_photo">图片</string>
+    <string name="str_video">录像</string>
+
+    <string name="record_call">您有访客</string>
+    <string name="record_pir">人体感应报警触发</string>
+    <string name="record_detect">移动侦测警报</string>
+    <string name="record_dismantle">防拆报警</string>
+    <string name="record_433">%1$s报警</string>
+    <string name="record_call_ok">已接来电</string>
+    <string name="record_call_no">未接来电</string>
+    <string name="record_low_charge">门铃低电量</string>
+
+    <!-- 设置 -->
+    <string name="ring_call">呼叫铃声</string>
+    <string name="ring_alarm">警报铃声</string>
+    <string name="str_vibrate">振动</string>
+    <string name="str_about">关于</string>
+    <string name="str_exit">退出</string>
+    <string name="default_ring">默认(%1$s)</string>
+    <string name="default_ring_2">默认</string>
+    <string name="silent_ring">静音</string>
+    <string name="exit_app">确定退出程序?</string>
+    <string name="version_check">版本更新</string>
+    <string name="version_latest">已是最新版本</string>
+    <string name="no_version_latest">有最新版本</string>
+
+    <string name="version_find">发现新版本</string>
+    <string name="update">更新</string>
+
+
+    <!-- 列表删除界面 -->
+    <string name="deleting">正在删除...</string>
+    <string name="tips_delete_failed">删除失败</string>
+    <string name="select_all">全选</string>
+    <string name="delete_with_count">删除(%1$d)</string>
+    <string name="tips_delete">要删除所选内容吗?</string>
+
+    <!-- 添加设备 -->
+    <string name="add_dev">添加设备</string>
+    <string name="add_dev_failed">添加失败</string>
+    <string name="str_scan">扫一扫</string>
+    <string name="add_lan">局域网搜索</string>
+
+    <string name="tips_add_scan">通过好友分享的二维码添加</string>
+    <string name="choose_dev">选择设备</string>
+    <string name="connect_dev">连接设备</string>
+    <string name="wifi_set">设置WiFi</string>
+    <string name="next_step">下一步</string>
+    <string name="str_complete">完成</string>
+
+    <!--    <string name="tips_add_step_1">接通电源，请耐心等待25秒左右直到语音提示[启动成功] 指示灯变蓝光时点击下一步</string>
+        <string name="tips_add_step_qr">将二维码正对摄像头，保持在1米左右\r\n 听到\"WIFI连接成功\"，点击下一步 </string>
+            <string name="wifi_set_dev_dlg_msg">手机需要连接到设备WiFi,是否立即去连接</string>
+    -->
+    <string name="doorbell">门铃</string>
+    <string name="doorbell_text">按住响铃键5秒，红灯闪烁后，再松开按键。</string>
+    <string name="network_camera">网络摄像机</string>
+    <string name="network_camera_text">按住设备的Reset键3到5秒，听到语音播放\"恢复出厂成功\"，等待设备提示\"启动成功\"。</string>
+    <string name="tips_add_step_1"> 请将设备进入配置WIFI模式。</string>
+    <string name="tips_add_step_qr"> 请将手机二维码置于摄像头前方30-50厘米，听到\"无线信息获取成功\"后可将手机移开，听到\"无线连接成功\"，再点击下一步添加设备 </string>
+    <string name="wifi_set_dev_dlg_msg"> WIFI需要连接到以AP_开头的设备热点，是否连接？</string>
+
+    <string name="tips_add_step_2">仅支持2.4G WiFi</string>
+    <string name="tips_add_step_3">首次配对时\n请确保手机和设备在同一WiFi范围内</string>
+    <string name="tips_add_step_ap">请将手机连接到设备的热点后, 点击下一步继续</string>
+    <string name="connect_dev_wifi">连接设备WiFi</string>
+    <string name="wifi_name">WiFi:</string>
+    <string name="hint_wifi_pwd">请输入WiFi密码</string>
+    <string name="tips_pwd_lengh_not_enough">WiFi密码至少为8位</string>
+    <string name="wifi_set_dlg_title">设置WiFi</string>
+    <string name="wifi_set_dlg_msg">WiFi尚未连接,是否立即设置WiFi</string>
+    <string name="wifi_set_dev_dlg_title">@string/connect_dev_wifi</string>
+
+    <string name="gps_set_dlg_title">打开定位功能</string>
+    <string name="gps_set_dlg_msg">当前应用需要打开定位功能,是否立即设置</string>
+
+
+    <string name="tips_configuring">配置中，请稍候...</string>
+    <string name="tips_result_ok">恭喜你! 添加成功</string>
+    <string name="tips_wifi_not_connect">WiFi尚未连接</string>
+    <string name="tips_get_wifi_info">正在获取WiFi信息</string>
+    <string name="tips_add_failed_1">没有发现设备,请稍候重试</string>
+    <string name="tips_reset_kj">请插入网线后重试</string>
+    <string name="tips_reset_1">配对失败时,请按下图操作,长按复位键3秒,\n将设备重置,操作时请保持设备通电</string>
+    <string name="tips_reset_2">配对失败时,请按下图操作,\n长按开锁键4秒,操作时请保持设备通电</string>
+    <string name="tips_reset_3">配对失败时,请按下图操作,长按复位键5秒,\n将设备重置,操作时请保持设备通电</string>
+    <string name="tips_reset_ok">当听到语音提示\n \"系统复位成功\"\n 表明设备已重置成功</string>
+    <string name="btn_reset_ok">我已重置成功</string>
+    <string name="tips_reset_4">配对失败时，请按下图操作，\n长按呼叫键10秒，操作时请保持设备通电</string>
+
+    <string name="wifi_change">更换</string>
+    <string name="choose_wifi">选择WiFi</string>
+
+    <string name="searching">正在搜索设备…</string>
+    <string name="tips_empty_dev">暂时没找到</string>
+    <string name="add">添加</string>
+    <string name="retry">再来一次</string>
+    <string name="added">已添加</string>
+
+    <!-- 添加方式相关 -->
+    <string name="ap_config">AP方式</string>
+    <string name="wired_config">有线方式</string>
+    <string name="qrcode_config">二维码方式（推荐）</string>
+
+    <string name="ap_desc">手机连接设备发出的WiFi</string>
+    <string name="wired_desc">设备已经与路由器连接</string>
+    <string name="qrcode_desc">用摄像头扫描二维码</string>
+    <string name="add_help">如何连接设备</string>
+
+    <!-- 添加帮助 -->
+    <string name="add_help_title">网络配置帮助</string>
+    <string name="add_help_content">1. 设备暂时只支持接入2.4G WiFi，不支持5GWiFi；\n2. 设备暂不支持WPA/WPA2企业级WiFi；\n3. 路由器的WiFi SSID不能隐藏；\n4. 路由器不能开启AP隔离，防蹭网等限制WiFi接入的选项；\n5. 若设备语音提示“WIFI”连接失败，请检查配置的WiFi SSID和密码是否正确；\n6. 进入WIFI配网模式，按住摄像头的Reset按钮3-5秒，设备提示进入“恢复出厂成功“后设备重启，等待设备提示”启动成功“或”请使用手机APP配置WIFI名称和密码”；\n7. 二维码配网和AP配网模式只有在设备进入配网模式时，操作才会成功；\n8. 摄像头无法扫描手机的二维码，请将二维码放在摄像头前方30-50厘米，适当调整距离，一般2-3秒内可采集成功；\n9. AP配网时需要将手机接入设备的热点，设备热点名为AP_*。</string>
+
+
+    <!--    <string name="auto_desc">摄像头和手机在同一个2.4G WIFI下</string>-->
+
+    <!-- 二维码名片 -->
+    <string name="qr_code_tips">分享二维码,共享您的设备</string>
+    <string name="qr_title">二维码</string>
+    <string name="qr_share">分享</string>
+    <string name="qr_share_to">分享到</string>
+
+
+    <!-- 图片选择弹出框相关 -->
+    <string name="take_photo">拍照</string>
+    <string name="choose_form_album">从相册选择</string>
+    <string name="restore_to_default">恢复默认</string>
+
+
+    <!-- 相册选择 -->
+    <string name="image_count">%1$d张</string>
+    <string name="album_all">所有图片</string>
+    <string name="str_album">相册</string>
+    <string name="choose_album">选择相册</string>
+    <string name="album_device">设备相册</string>
+    <string name="album_local">本地相册</string>
+    <string name="toast_cannot_retrieve_selected_image">Cannot retrieve selected image</string>
+    <string name="toast_cannot_retrieve_cropped_image">Cannot retrieve cropped image</string>
+    <string name="toast_unexpected_error">Unexpected error</string>
+
+
+    <!-- 呼叫等待 -->
+    <string name="other_user_answered">其他用户已接通</string>
+    <string name="p2p_disconnect">会话已中断</string>
+    <string name="desc_movement">移动报警</string>
+    <string name="desc_alarm_dismantle">防拆报警</string>
+    <string name="desc_alarm_433">%1$s报警</string>
+    <string name="desc_alarm_other">报警</string>
+
+    <!-- 视频通话 -->
+    <string name="unlock">开锁</string>
+    <string name="hangup">挂断</string>
+    <string name="answer">接听</string>
+    <string name="close">关闭</string>
+    <string name="watch">查看</string>
+
+    <string name="resolution_h">高清</string>
+    <string name="resolution_m">标清</string>
+    <string name="resolution_l">流畅</string>
+    <string name="resolution_h_simple">高清</string>
+    <string name="resolution_m_simple">标清</string>
+    <string name="resolution_l_simple">流畅</string>
+
+    <string name="stream_main">主码流</string>
+    <string name="stream_secondary">次码流</string>
+    <string name="stream_main_simple">主码流</string>
+    <string name="stream_secondary_simple">次码流</string>
+
+
+    <string name="tips_unlock_listening">监视中不允许开锁</string>
+    <string name="tips_unlock_alarm">报警接听状态不允许开锁</string>
+    <string name="tips_unlock">是否需要开锁?</string>
+    <string name="lock_door">大门锁</string>
+    <string name="lock_gate">栅门锁</string>
+    <string name="video_fetching">正在获取视频…</string>
+    <string name="get_video_failed">视频获取失败</string>
+    <string name="tips_camera_monitor">4个方向拖动视频窗口 \n 调整画面视角</string>
+    <string name="i_see">我知道了</string>
+    <string name="sd_not_exist_photo">该设备没有SD卡,照片保存失败</string>
+    <string name="sd_size_not_enough">SD卡内存不够，请清理后再录像</string>
+    <string name="photo_failed">拍照失败</string>
+    <string name="photo_success">拍照成功</string>
+
+    <string name="tips_wake_up">正在唤醒</string>
+    <string name="tips_dev_online">设备已上线</string>
+    <string name="tips_monitoring">正在监控</string>
+    <string name="tips_calling">正在呼叫</string>
+    <string name="tips_talking">正在通话</string>
+    <string name="tips_alarm_detect">移动报警</string>
+    <string name="tips_alarm_dismantle">防拆报警</string>
+
+    <!-- 设备设置 V2 -->
+    <string name="dev_set">配置</string>
+    <string name="dev_set_bg">设置背景</string>
+    <string name="dev_set_pwd">修改密码</string>
+    <string name="cur_wifi">当前WiFi</string>
+    <string name="dev_name">设备名</string>
+    <string name="motion_detect">移动侦测</string>
+    <string name="missed">未接听</string>
+    <string name="answered">已接听</string>
+    <string name="infrared_alarm">红外报警</string>
+    <string name="qr_code_card">二维码名片</string>
+    <string name="has_been_open_one">夜间模式</string>
+    <string name="has_been_open_one_two">24小时</string>
+    <!--    <string name="has_been_open_one_three">已开启\n</string>-->
+    <string name="not_been_open">未开启</string>
+    <string name="pir_open">PIR监测开启</string>
+    <string name="alarm_remove_open">防拆报警开启</string>
+    <string name="pir_alarm_remove_open">PIR监测、防拆报警开启</string>
+
+
+    <string name="deployment">布防</string>
+    <string name="tips_empty_subdev">暂无关联设备</string>
+    <string name="check_code">对码</string>
+    <string name="modify_pwd">修改密码</string>
+    <string name="auto_record">自动录像</string>
+    <string name="power_frequency">电源频率</string>
+    <string name="adjust_voice">音量调节</string>
+    <string name="time_zone">设备时区</string>
+    <string name="dev_language">设备语言</string>
+    <string name="sdcard">SD卡</string>
+    <string name="restore_factory">恢复出厂设置</string>
+    <string name="restart_dev">重启设备</string>
+
+    <string name="status_ok">状态正常</string>
+    <string name="status_block">免打扰</string>
+    <string name="dev_block">免打扰</string>
+    <string name="tab_dev_set_1">用户</string>
+    <string name="tab_dev_set_2">设备</string>
+    <string name="tab_dev_set_3">关联</string>
+    <string name="choose_language">请选择语言</string>
+    <string name="need_restart_dev">确定重启设备?</string>
+    <string name="need_restore_factory">确定恢复出厂设置?</string>
+    <string name="rebooting">正在重启</string>
+    <string name="restoring">正在恢复出厂设置</string>
+    <string name="version_info">版本</string>
+    <string name="dev_sys">设备系统</string>
+    <string name="downloading">设备系统正在更新中...,已完成%1$d</string>
+    <string name="downloading_with_progress">设备系统正在更新中...,已完成%1$d</string>
+    <string name="tips_version">发现新版设备系统\r\n最新的系统给您更好的应用</string>
+    <string name="update_success">升级成功,需要重新配置WIFI</string>
+    <string name="update_failed">升级失败</string>
+
+    <!-- 移动侦测 -->
+    <string name="mode_night">夜间模式</string>
+    <string name="mode_day">全天</string>
+    <string name="mode_custom">侦测区</string>
+    <string name="mode_record">触发录像</string>
+    <string name="mode_audio">报警音效</string>
+    <string name="start_time">开始时间</string>
+    <string name="end_time">结束时间</string>
+    <string name="mode_pir">PIR报警</string>
+    <string name="mode_alarm">防拆报警</string>
+    <string name="charge_alarm">低电量报警</string>
+    <string name="mode_record_time">录像时间</string>
+    <string name="new_online">设备上线</string>
+    <string name="record_time_desc">%d秒</string>
+    <string name="unit_sec">秒</string>
+    <string name="pir">灵敏度</string>
+
+    <!-- 设备类型名 -->
+    <string name="type_ipc">摇头机</string>
+    <string name="type_ipcc">卡片机</string>
+    <string name="type_ipfc">鱼眼摄像机</string>
+    <string name="type_bell_unidirectional">门铃</string>
+    <string name="type_bell_bi_directional">门铃</string>
+    <string name="type_cat_eye">猫眼</string>
+
+    <!-- SD卡 -->
+    <string name="sdcard_status">SD卡状态</string>
+    <string name="storage_space">存储空间</string>
+    <string name="sdcard_read_only">SD卡只读，请先格式化</string>
+    <string name="format">格式化</string>
+    <string name="storage_used">已用: %1$s</string>
+    <string name="storage_rest">可用: %1$s</string>
+    <string name="sd_not_format">SD卡尚未格式化</string>
+    <string name="tips_format_sd_card">SD卡内容将全部清除，\n确定要格式化吗?</string>
+    <string name="formating">正在格式化</string>
+    <string name="get_sd_failed">SD卡状态获取失败</string>
+    <string name="format_success">SD卡格式化成功</string>
+    <string name="sd_no_exist">SD卡不存在</string>
+    <string name="dev_no_support_sd">设备不支持SD卡读写</string>
+    <string name="sd_no_exist_format">SD卡已被拔出，格式化失败</string>
+    <string name="formating_with_progress">正在格式化，已完成%1$d</string>
+
+    <!-- 查看图片 -->
+    <string name="title_photo">@string/str_photo</string>
+    <string name="tips_del_pic">确定要删除所选图片?</string>
+
+    <!-- 查看视频 -->
+    <string name="tips_del_video">确定要删除该视频吗?</string>
+
+    <!-- 修改密码页 -->
+    <string name="hint_pwd_orig">请输入原密码</string>
+    <string name="hint_pwd_new">请输入新密码</string>
+    <string name="hint_pwd_new2">请再次输入新密码</string>
+    <string name="tips_err_pwd_orig">原密码错误</string>
+    <string name="tips_err_pwd_new_2">新密码两次输入不一致</string>
+    <string name="tips_err_pwd_same">原密码与新密码相同</string>
+    <string name="tips_err_pwd">密码错误</string>
+    <string name="tips_err_user">用户名错误</string>
+    <string name="tips_err_set">设置失败</string>
+    <string name="tips_err_default_pwd">当前使用默认密码登陆，为保证您的隐私安全，请到设置界面修改默认密码。</string>
+
+    <!-- 视频回放 -->
+    <string name="title_choose_date">选择日期</string>
+    <string name="title_dev_video">设备端视频</string>
+    <string name="file_mgr">文件管理</string>
+    <string name="tips_empty_file">暂无文件</string>
+    <string name="tips_loading_video">正在加载视频列表...</string>
+
+
+    <!-- 帮助中心 -->
+    <string name="help_center">帮助中心</string>
+    <string name="help_push">1. 应用无法收到推送</string>
+    <string name="help_permission">2. 通话、录像、摄像功能头无法使用</string>
+
+    <string name="help_push_desc">为保证门铃来电提示正常使用，请按照下列提示开启自启动管理，需要将应用加到【自启动管理】列表，\n否则杀掉进程或重新开机后无法收到门铃来电推送。\n小米【MIUI】\n自启动管理：需要把应用加到【自启动管理】列表，否则杀进程或重新开机后进程无法开启\n通知栏设置：应用默认都是显示通知栏通知，如果关闭，则收到通知也不会提示\n网络助手：可以手动禁止已安装的第三方程序访问2G/3G和WIFI的网络和设置以后新安装程序是否允许访问2G/3G和WIFI的网络\nMIUI 7 神隐模式： 允许应用进行自定义配置模式，应用在后台保持联网可用，否则应用进入后台时，应用无法正常接收消息。【设置】下电量和性能中【神隐模式】\n华为【Emotion】\n自启动管理：需要把应用加到【自启动管理】列表，否则杀进程或重新开机后进程不会开启，只能手动开启应用\n后台应用保护：需要手动把应用加到此列表，否则设备进入睡眠后会自动杀掉应用进程，只有手动开启应用才能恢复运行\n通知管理：应用状态有三种：提示、允许、禁止。禁止应用则通知栏不会有任何提醒\n魅族【Flyme】\n自启动管理：需要把应用加到【自启动管理】列表，否则杀进程或重新开机后进程无法开启\n通知栏推送：关闭应用通知则收到消息不会有任何展示\n省电管理： 安全中心里设置省电模式，在【待机耗电管理】中允许应用待机时，保持允许，否则手机休眠或者应用闲置一段时间，无法正常接收消息。\nVIVO【Funtouch OS】\n内存一键清理：需要将应用加入【白名单】列表，否则系统自带的“一键加速”，会杀掉进程\n自启动管理：需要将应用加入“i管家”中的【自启动管理】列表，否则重启手机后进程不会自启。但强制手动杀进程，即使加了这个列表中，后续进程也无法自启动。\nOPPO【ColorOS】\n冻结应用管理：需要将应用加入纯净后台，否则锁屏状态下无法及时收到消息\n自启动管理：将应用加入【自启动管理】列表的同时，还需要到设置-应用程序-正在运行里锁定应用进程，否则杀进程或者开机后进程不会开启，只能手动开启应用\n三星\n内存一键优化：需要将应用加入【白名单】列表，否则系统内存优化后，会杀掉应用进程</string>
+    <string name="help_permission_desc"> APP需要得到相关的权限才能正常工作，进入设置->权限管理->选择应用，打开所有权限并添加到信任。</string>
+
+    <!--权限中心-->
+    <string name="permission_center">权限中心</string>
+    <string name="permission_notification_bar">通知栏</string>
+    <string name="permission_ignore_battery">忽略电池优化</string>
+    <string name="permission_lock_screen">锁屏显示</string>
+    <string name="permission_autorun">自启动</string>
+    <string name="permission_background">后台保护</string>
+    <string name="permission_notification_msg">检测应用未获取通知栏权限，可能会错过重要的信息哟！去设置？</string>
+    <string name="permission_background_msg">开启“IGuarder”应用，然后操作手机菜单键，找到“IGuarder”点击右上角的小锁，锁定程序。</string>
+
+    <!-- 433 子设备 -->
+    <string name="dev_type">设备类型</string>
+    <string name="sub_type_1">遥控</string>
+    <string name="sub_type_2">报警</string>
+    <string name="sub_type_3">其它</string>
+    <string name="cfg_433_ok">配对成功</string>
+    <string name="cfg_433_timeout">配对超时</string>
+    <string name="cfg_433_max">设备已达上限</string>
+    <string name="cfg_433_waiting">正在配对</string>
+    <string name="cfg_433_exists">设备已存在</string>
+    <string name="tips_checking_code">正在对码，请稍候...</string>
+    <string name="choose_dev_type">请选择设备类型</string>
+
+    <string name="under_development">该功能正在开发中</string>
+    <string name="white_list">请将"IGuarder"添加到白名单中</string>
+    <string name="Filevideo_event_ringbell_answer">已接听</string>
+    <string name="Filevideo_event_ringbell_no_answer">未接听</string>
+    <string name="Filevideo_event_pir">红外报警</string>
+    <string name="Filevideo_event_motiondect">移动侦测</string>
+    <string name="Item_wake_up">唤醒</string>
+
+    <string name="tips_exit_app">是否退出当前应用，退出应用后将无法收到呼叫请求。</string>
+</resources>

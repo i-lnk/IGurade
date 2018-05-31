@@ -1,0 +1,77 @@
+<resources>
+
+    <style name="btn_bottom" parent="btn_com">
+        <item name="android:layout_marginLeft">15dp</item>
+        <item name="android:layout_marginRight">15dp</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_marginBottom">15dp</item>
+        <item name="android:layout_height">45dp</item>
+    </style>
+
+    <style name="tab_home">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <!-- 视频通话 控制栏控件 -->
+    <style name="call_talk_ctrl">
+        <item name="android:layout_width">0dip</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1.0</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:paddingBottom">8dip</item>
+        <item name="android:paddingTop">8dip</item>
+        <item name="android:paddingLeft">2dip</item>
+        <item name="android:paddingRight">2dip</item>
+        <item name="android:background">@drawable/common_pressed</item>
+    </style>
+
+    <!-- 视频通话 控制栏控件 分隔线 -->
+    <style name="call_talk_ctrl_divider">
+        <item name="android:layout_width">@dimen/divider_height_1px</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginBottom">13dip</item>
+        <item name="android:layout_marginTop">13dip</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="My.TextAppearance.MaterialCalendarWidget.Date" parent="android:TextAppearance.DeviceDefault.Medium">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="My.TextAppearance.MaterialCalendarWidget.Header" parent="android:TextAppearance.DeviceDefault.Medium">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="My.TextAppearance.MaterialCalendarWidget.WeekDay" parent="android:TextAppearance.DeviceDefault.Medium">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <!-- SeekBar 视频播放进度条 -->
+    <style name="Widget.SeekBar.Normal" parent="@android:style/Widget.SeekBar">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:indeterminateDrawable">@drawable/seekbar_horizontal</item>
+        <item name="android:progressDrawable">@drawable/seekbar_horizontal</item>
+        <item name="android:thumb">@drawable/seekbar_thumb</item>
+        <item name="android:thumbOffset">7.5dip</item>
+        <item name="android:maxHeight">6.0dip</item>
+        <item name="android:minHeight">6.0dip</item>
+    </style>
+
+
+    <!--    <style name="activityAnim">
+            <item name="Android:activityOpenEnterAnimation">@anim/slide_in_top</item>
+            <item name="Android:activityOpenExitAnimation">@anim/slide_in_top</item>
+        </style>-->
+
+    <!--    <style name="AppTheme.About" parent="AppTheme.NoActionBar.NoTrans">
+            &lt;!&ndash; Customize your theme here. &ndash;&gt;
+            <item name="colorPrimary">@color/bg_about</item>
+            <item name="colorPrimaryDark">@color/bg_about</item>
+        </style>-->
+
+</resources>

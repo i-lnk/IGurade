@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <include layout="@layout/common_toolbar" />
+
+    <LinearLayout
+        android:id="@+id/ly_all"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_window"
+        android:orientation="vertical"
+        android:paddingTop="20dip"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <TextView
+            style="@style/text_common"
+            android:layout_marginLeft="12dip"
+            android:text="@string/dev_type" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dip"
+            android:background="@color/white">
+
+            <ListView
+                android:id="@+id/lv_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dip"
+                android:layout_marginRight="5dip"
+                android:cacheColorHint="#00000000"
+                android:divider="#00000000"
+                android:dividerHeight="0dp"
+                android:listSelector="@android:color/transparent"
+                android:scrollbars="none" />
+        </FrameLayout>
+
+        <TextView
+            style="@style/text_common"
+            android:layout_marginLeft="12dip"
+            android:layout_marginTop="20dip"
+            android:text="@string/dev_name" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dip"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="5dip"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip"
+            android:paddingTop="5dip">
+
+            <ImageView
+                android:id="@+id/iv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_433_remote_2" />
+
+            <com.nicky.framework.widget.XEditText
+                android:id="@+id/et_name"
+                style="@style/edit_common"
+                android:layout_width="match_parent"
+                android:layout_height="45dip"
+                android:layout_marginLeft="8dip"
+                android:hint="@string/dev_name"
+                android:paddingLeft="5dip" />
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btn_next"
+            style="@style/btn_com"
+            android:layout_height="50dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="30dp"
+            android:text="@string/next_step" />
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>
+

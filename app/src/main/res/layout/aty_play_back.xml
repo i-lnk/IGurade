@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <!-- 视频区域 -->
+    <RelativeLayout
+        android:id="@+id/ly_video"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black">
+
+
+        <android.opengl.GLSurfaceView
+            android:id="@+id/sv_video"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+
+        <LinearLayout
+            android:id="@+id/ly_progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <com.nicky.framework.progressbar.CircularProgressBar
+                android:id="@+id/pb_video"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginBottom="8dip"
+                android:layout_marginTop="2dip"
+                android:indeterminate="true"
+                android:indeterminateOnly="false"
+                app:cpb_colors="@array/gplus_colors"
+                app:cpb_stroke_width="4.0dip" />
+
+            <TextView
+                style="@style/text_common"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:text="@string/video_fetching"
+                android:textColor="@color/text_video_ctrl"
+                android:textSize="@dimen/text_16" />
+        </LinearLayout>
+
+        <!-- 顶部 -->
+        <RelativeLayout
+            android:id="@+id/ly_top"
+            android:layout_width="match_parent"
+            android:layout_height="55dp">
+
+            <FrameLayout
+                android:id="@+id/bg_top"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha="0.3"
+                android:background="#000000"
+                android:paddingBottom="10dip"
+                android:paddingTop="10dip" />
+
+
+            <ImageView
+                android:id="@+id/iv_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/common_pressed"
+                android:padding="8dp"
+                android:src="@mipmap/ic_monitor_close" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                style="@style/text_common"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/iv_close"
+                android:text="@string/app_name"
+                android:textColor="@color/white" />
+
+        </RelativeLayout>
+
+
+        <!-- 横屏时底部控制栏 -->
+        <RelativeLayout
+            android:id="@+id/ly_bottom_ctrl"
+            android:layout_width="match_parent"
+            android:layout_height="60dip"
+            android:layout_alignParentBottom="true">
+
+            <FrameLayout
+                android:id="@+id/bg_bottom_ctrl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha="0.3"
+                android:background="#000000"
+                android:paddingBottom="8dip"
+                android:paddingTop="8dip" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="left|center_vertical"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="1dip">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/ic_play_pause"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dip"
+                        android:src="@drawable/ic_play_stop_selector" />
+                </FrameLayout>
+
+
+                <TextView
+                    android:id="@+id/tv_play_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dip"
+                    android:layout_marginRight="10dip"
+                    android:text="00:00"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_14" />
+
+                <SeekBar
+                    android:id="@+id/seekbar"
+                    style="@style/Widget.SeekBar.Normal"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/tv_video_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="15dip"
+                    android:text="03:00"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_14" />
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

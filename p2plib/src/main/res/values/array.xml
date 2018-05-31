@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <integer-array name="time_zone_val">
+        <item>-720</item> <!--NEW-->
+        <item>-660</item>
+        <item>-600</item>
+        <item>-540</item>
+        <item>-480</item>
+        <item>-420</item>
+        <item>-360</item>
+        <item>-300</item>
+        <item>-270</item> <!--NEW-->
+        <item>-240</item>
+        <item>-210</item>
+        <item>-180</item>
+        <item>-120</item>
+        <item>-60</item>
+        <item>0</item>
+        <item>60</item>
+        <item>120</item>
+        <item>180</item>
+        <item>210</item>
+        <item>240</item>
+        <item>270</item>
+        <item>300</item>
+        <item>330</item>
+        <item>345</item> <!--NEW-->
+        <item>360</item>
+        <item>390</item> <!--NEW-->
+        <item>420</item>
+        <item>480</item>
+        <item>540</item>
+        <item>570</item>
+        <item>600</item>
+        <item>660</item>
+        <item>720</item>
+    </integer-array>
+
+    <string-array name="time_zone_city_names">
+        <item>International date line West</item> <!--NEW-->
+        <item>Midway Island,Samoa</item>
+        <item>Hawaii</item>
+        <item>Alaska</item>
+        <item>Pacific Time (US、Canada)</item>
+        <item>Mountain Time (US、Canada)</item>
+        <item>Central Time (US、Canada), Mexico</item>
+        <item>Eastern Time (US、Canada), Lima, Bogota</item>
+        <item>Caracas</item> <!--NEW-->
+        <item>Atlantic Time (Canada), Santiago, La Paz</item>
+        <item>Newfoundland</item>
+        <item>Brasilia, Buenos Aires, Georgetown</item>
+        <item>Mid-Atlantic </item>
+        <item>Verde Islands</item>
+        <item>Greenwich, London, Lisbon, Casablanca</item>
+        <item>Brussels, Paris, Berlin, Rome, Madrid, Stockholm, Belgrade, Prague</item>
+        <item>Athens, Jerusalem, Cairo, Helsinki</item>
+        <item>Nairobi, Riyadh, Moscow</item>
+        <item>Tehran</item>
+        <item>Baku, Tbilisi, Abu Dhabi, Muscat</item>
+        <item>Kobel</item>
+        <item>Islamabad, Karachi, Toshkent</item>
+        <item>Calcutta, Mumbai, Madras, New Delhi</item>
+        <item>Kathmandu</item> <!--NEW-->
+        <item>Almaty, Novosibirsk, Astana, Dale </item> 
+        <item>Yangon</item> <!--NEW-->       
+        <item>Bangkok, Hanoi, Jakarta </item>     
+        <item>Beijing, Singapore, Taipei </item>      
+        <item>Seoul, Yakutsk, Tokyo </item>        
+        <item>Darwin </item>     
+        <item>Guam, Melbourne, Sydney, Port Moresby, Vladivostok </item>       
+        <item>Magadan, Solomon Islands, New Caledonia </item>       
+        <item>Auckland, Wellington, Fiji </item>
+    </string-array>
+
+
+    <string-array name="time_zone_descs">
+        <item>GMT-12:00</item> <!--NEW-->
+        <item>GMT-11:00</item>
+        <item>GMT-10:00</item>
+        <item>GMT-09:00</item>
+        <item>GMT-08:00</item>
+        <item>GMT-07:00</item>
+        <item>GMT-06:00</item>
+        <item>GMT-05:00</item>
+        <item>GMT-04:30</item> <!--NEW-->
+        <item>GMT-04:00</item>
+        <item>GMT-03:30</item>
+        <item>GMT-03:00</item>
+        <item>GMT-02:00</item>
+        <item>GMT-01:00</item>
+        <item>GMT</item>
+        <item>GMT+01:00</item>
+        <item>GMT+02:00</item>
+        <item>GMT+03:00</item>
+        <item>GMT+03:30</item>
+        <item>GMT+04:00</item>
+        <item>GMT+04:30</item>
+        <item>GMT+05:00</item>
+        <item>GMT+05:30</item>
+        <item>GMT+05:45</item> <!--NEW-->
+        <item>GMT+06:00</item>
+        <item>GMT+06:30</item> <!--NEW-->
+        <item>GMT+07:00</item>
+        <item>GMT+08:00</item>
+        <item>GMT+09:00</item>
+        <item>GMT+09:30</item>
+        <item>GMT+10:00</item>
+        <item>GMT+11:00</item>
+        <item>GMT+12:00</item>
+    </string-array>
+
+<!--    <string-array name="custom_weekdays">
+        <item>SU</item>
+        <item>MO</item>
+        <item>TU</item>
+        <item>WE</item>
+        <item>TH</item>
+        <item>FR</item>
+        <item>SA</item>
+    </string-array>-->
+
+</resources>

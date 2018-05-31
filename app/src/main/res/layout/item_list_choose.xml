@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:baselineAligned="false"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/bg_item"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_item_height"
+        android:background="@drawable/bg_common_white_selector"
+        android:baselineAligned="false"
+        android:descendantFocusability="blocksDescendants"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/icon_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dip"
+            android:scaleType="centerInside" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            style="@style/text_common"
+            android:layout_width="0dip"
+            android:layout_marginLeft="10dip"
+            android:layout_weight="1.0"
+            android:text="@string/app_name" />
+
+        <!--        <ImageView
+                    android:id="@+id/icon_choose"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_choose_selector" />-->
+
+        <android.support.v7.widget.AppCompatRadioButton
+            android:id="@+id/icon_choose"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:background="@null"
+            android:clickable="false"
+            android:focusable="false"
+            android:gravity="center_vertical" />
+
+    </LinearLayout>
+
+    <!-- 分割线 -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_height"
+        android:background="@color/divider" />
+
+
+</LinearLayout>

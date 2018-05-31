@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 横屏时视频控制栏 -->
+<com.rl.geye.ui.widget.CtrlLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ly_video_ctrl_land"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:moveDistance="60dp"
+    app:move_direction="up">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="68dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_net_speed"
+            style="@style/TextAppearance.AppCompat.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:text="0k/s"
+            android:textAlignment="inherit"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="normal" />
+
+        <ImageView
+            android:id="@+id/iv_battery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_dev_battery" />
+
+    </LinearLayout>
+
+    <!--   <View
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:alpha="0.3"
+            android:background="#000000"
+            android:paddingBottom="8dip"
+            android:paddingTop="8dip"/>-->
+
+    <!-- 带background的View 不能全部移出范围，否则会造成卡顿-->
+    <LinearLayout
+        android:id="@+id/ly_ctrl"
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:background="#76000000"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_name"
+            style="@style/text_common"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.9"
+            android:paddingBottom="8dip"
+            android:paddingLeft="20dip"
+            android:paddingRight="2dip"
+            android:paddingTop="8dip"
+            android:text="@string/app_name"
+            android:textColor="@color/white" />
+
+        <View style="@style/call_talk_ctrl_divider" />
+
+        <!--        <TextView
+                    android:id="@+id/tv_stream"
+                    style="@style/text_common"
+                    android:layout_width="50dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:background="@drawable/btn_black_tran_selector"
+                    android:gravity="center"
+                    android:lines="1"
+                    android:paddingBottom="4dip"
+                    android:paddingLeft="7dip"
+                    android:paddingRight="7dip"
+                    android:paddingTop="4dip"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/text_14" />
+
+                <View
+                    android:id="@+id/line_stream"
+                    style="@style/call_talk_ctrl_divider" />-->
+
+        <ImageView
+            android:id="@+id/iv_mic"
+            style="@style/call_talk_ctrl"
+            android:src="@drawable/ic_call_mic_selector" />
+
+        <View style="@style/call_talk_ctrl_divider" />
+
+        <ImageView
+            android:id="@+id/iv_speaker"
+            style="@style/call_talk_ctrl"
+            android:src="@drawable/ic_call_speaker_selector" />
+
+        <View style="@style/call_talk_ctrl_divider" />
+
+
+        <ImageView
+            android:id="@+id/iv_video"
+            style="@style/call_talk_ctrl"
+            android:src="@drawable/ic_call_video_selector" />
+
+        <View style="@style/call_talk_ctrl_divider" />
+
+        <ImageView
+            android:id="@+id/iv_photo"
+            style="@style/call_talk_ctrl"
+            android:src="@drawable/ic_call_photo_selector" />
+
+        <View style="@style/call_talk_ctrl_divider" />
+
+        <ImageView
+            android:id="@+id/iv_zoom_out"
+            style="@style/call_talk_ctrl"
+            android:src="@mipmap/a5_ic_bell_zoom_out" />
+
+    </LinearLayout>
+
+
+</com.rl.geye.ui.widget.CtrlLayout>

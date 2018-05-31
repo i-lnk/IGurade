@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ly_all"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_window"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.0">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.nicky.framework.slidinglayout.SlidingLayout
+                android:id="@+id/ly_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:sliding_mode="both">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_dev"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="30dp"
+                    android:scrollbars="none" />
+
+
+            </com.nicky.framework.slidinglayout.SlidingLayout>
+
+            <!--  android:background="@color/white" -->
+
+            <LinearLayout
+                android:id="@+id/ly_bg_enable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="15dp"
+                android:alpha="0.5"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.nicky.framework.progressbar.CircularProgressBar
+                    android:id="@+id/pb_search"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="8dip"
+                    android:layout_marginTop="2dip"
+                    android:indeterminate="true"
+                    android:indeterminateOnly="false"
+                    app:cpb_colors="@array/gplus_colors"
+                    app:cpb_stroke_width="5.0dip" />
+
+                <TextView
+                    style="@style/text_common"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/searching"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/text_16" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progress"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="3dip"
+            android:max="100"
+            android:progressDrawable="@drawable/progressbar_my" />
+
+
+        <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_height"
+            android:layout_alignParentBottom="true"
+            android:background="@color/divider" />
+
+        <LinearLayout
+            android:id="@+id/ly_empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="20dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@mipmap/a1_empty_dev" />
+
+            <TextView
+                android:id="@+id/tv_empty"
+                style="@style/text_common"
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="8dip"
+                android:gravity="center"
+                android:paddingLeft="50dip"
+                android:paddingRight="50dip"
+                android:text="@string/tips_empty_dev"
+                android:textColor="@color/text_hint"
+                android:textSize="@dimen/text_16" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/btn_add"
+        style="@style/btn_bottom"
+        android:layout_marginLeft="30dp"
+        android:text="@string/add"
+        android:textSize="@dimen/text_16" />
+
+    <Button
+        android:id="@+id/btn_retry"
+        style="@style/btn_bottom"
+        android:text="@string/retry"
+        android:textSize="@dimen/text_16"
+        android:visibility="gone" />
+
+
+    <!--<RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:background="@mipmap/bg_about"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_ok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/a1_ic_success"/>
+
+            <TextView
+                android:id="@+id/tv_result"
+                style="@style/text_common"
+                android:layout_marginTop="8dip"
+                android:textColor="@color/white"
+                android:text="@string/tips_result_ok"
+                android:textSize="@dimen/text_16"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_complete"
+        style="@style/btn_bottom"
+        android:text="@string/str_complete" />
+        -->
+
+</LinearLayout>

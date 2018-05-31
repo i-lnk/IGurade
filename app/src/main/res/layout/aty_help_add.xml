@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <include layout="@layout/common_toolbar" />
+
+    <com.nicky.framework.slidinglayout.SlidingLayout
+        android:id="@+id/ly_all"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_window"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:sliding_mode="both">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="15dip"
+            android:scrollbars="none">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_help"
+                    style="@style/text_common"
+                    android:layout_marginBottom="20dip"
+                    android:layout_marginTop="20dip"
+                    android:lineSpacingExtra="3.5dp"
+                    android:lineSpacingMultiplier="1.6"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:text="@string/add_help_content" />
+
+            </LinearLayout>
+        </ScrollView>
+    </com.nicky.framework.slidinglayout.SlidingLayout>
+
+</android.support.design.widget.CoordinatorLayout>
+
+
+

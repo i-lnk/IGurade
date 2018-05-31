@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">KeepLibrary</string>
+    <string name="action_keep_service_label">KeepService</string>
+</resources>

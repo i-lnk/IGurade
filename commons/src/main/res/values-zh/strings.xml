@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="tips_input_no_emoji2"> 不能包含表情符号 </string>
+    <string name="tips_input_no_chinese"> 不能包含中文字符 </string>
+    <string name="tips_input_max_length2"> 最多输入 %1$d 字符 </string>
+
+    <string name="sunday_full">星期日</string>
+    <string name="monday_full">星期一</string>
+    <string name="tuesday_full">星期二</string>
+    <string name="wednesday_full">星期三</string>
+    <string name="thursday_full">星期四</string>
+    <string name="friday_full">星期五</string>
+    <string name="saturday_full">星期六</string>
+
+    <string name="am">上午</string>
+    <string name="pm">下午</string>
+    <string name="yesterday">昨天</string>
+
+    <string name="err_data">数据出错</string>
+
+
+
+</resources>

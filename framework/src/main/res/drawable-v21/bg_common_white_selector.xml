@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 白底,选中变淡蓝  -->
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/bg_press">//点击时波纹的颜色
+    <item
+        android:drawable="@color/white" />//未点击时控件的颜色
+</ripple>

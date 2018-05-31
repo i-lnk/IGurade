@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/btn_common_press">//点击时波纹的颜色
+    //未点击时控件
+    <item
+        android:drawable="@drawable/btn_comm_selector"></item>
+
+</ripple>

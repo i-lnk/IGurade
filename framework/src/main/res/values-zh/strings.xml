@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <string name="err_data">数据出错</string>
+
+    <!--  empty view 、loading view 、err view 提示  -->
+    <string name="common_loading_message">Loading...</string>
+    <string name="common_empty_msg">Failed to resolve data\nPlease hit the screen and try again~</string>
+    <string name="common_error_msg">Something wrong!\nPlease hit the screen and try again~</string>
+    <string name="common_no_network_msg">No network connected!\nPlease hit the screen and try again after connected~</string>
+    <string name="common_load_more_end">No more content</string>
+    <string name="common_load_timeout">Load timeout!</string>
+
+    <!-- 二维码扫描 -->
+    <string name="invalid_qr_code">二维码无效</string>
+    <string name="device_exists">设备已存在</string>
+    <string name="title_scan">二维码扫描</string>
+    <string name="scan_tips">请将二维码置于框内</string>
+    <string name="invalid_id">ID号无效</string>
+    <string name="code_expired">二维码已过期</string>
+    <string name="scan_failed">扫描失败</string>
+    <string name="tips_warning">警告</string>
+    <string name="tips_sry_restart">抱歉，相机出现问题，您可能需要重启相机</string>
+
+</resources>

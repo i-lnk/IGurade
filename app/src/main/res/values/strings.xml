@@ -1,0 +1,407 @@
+<resources>
+    <string name="app_name">IGuarder</string>
+
+    <string name="str_cancel">Cancel</string>
+    <string name="str_ok">OK</string>
+    <string name="str_apply">Apply</string>
+    <string name="time_out">Time out</string>
+    <string name="str_delete">Delete</string>
+    <string name="permission_title_rationale">Request for Permission</string>
+    <string name="permission_read_storage_rationale">The current operation need to apply for reading SD card</string>
+    <string name="permission_write_storage_rationale">The current operation need to apply for a SD card access rights</string>
+    <string name="permission_read_write_storage_rationale">The current operation need to apply for reading and writing SD card authority</string>
+    <string name="permission_camera_rationale">The current operation need to apply for a camera permission</string>
+
+    <string name="tips_data_get_failed">Failed to get %1$s</string>
+    <string name="tips_data_set_failed">Failed to set %1$s</string>
+    <string name="register_name_digits"> ._0123456789 abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLIMNOPQRSTUVWXYZ</string>
+
+    <!-- 首页 -->
+    <string name="tips_launcher">Guard your home Easily</string>
+    <string name="tips_welcome_to_use">Welcome to use %1$s</string>
+    <string name="str_device">Devices</string>
+    <string name="str_record">Records</string>
+    <string name="str_message">Messages</string>
+    <string name="str_settings">Settings</string>
+    <string name="synchronizing_data">Synchronizing data...</string>
+
+    <!-- 我的设备 -->
+    <string name="title_device">My Device</string>
+    <string name="pppp_status_invalid_id">@string/invalid_id</string>
+    <string name="pppp_status_initialing">Device connected, initializing</string>
+    <string name="pppp_status_connect_not_allow">Connection is full</string>
+    <string name="pppp_status_unknown">Unknown status</string>
+    <string name="pppp_status_connecting">Connecting...</string>
+    <string name="pppp_status_online">Online</string>
+    <string name="pppp_status_disconnect">Offline</string>
+    <string name="pppp_status_connect_failed">Connect failed</string>
+    <string name="pppp_status_connect_timeout">Connect timed out</string>
+    <string name="pppp_status_user_not_login">User is not logged in</string>
+    <string name="pppp_status_err_user_pwd">Incorrect username or password</string>
+    <string name="pppp_status_connect_user_login">The user has connected devices onto other mobile phone</string>
+    <string name="pppp_status_err_pwd">Password error</string>
+    <string name="pppp_status_sleep">Sleep</string>
+    <string name="hint_user">Please enter your user name</string>
+    <string name="hint_pwd">Please enter the password</string>
+    <string name="hint_dev_connecting">Device is connecting, please wait...</string>
+    <string name="Disconnected">Disconnected. Please check the network settings.</string>
+    <string name="hint_dev_offline">Device is not online </string>
+    <string name="tips_del_dev">Sure to delete the device?</string>
+
+
+    <!-- 记录 -->
+    <string name="tips_empty_photo">No photos yet</string>
+    <string name="tips_empty_video">No videos yet</string>
+    <string name="tips_empty_record">No records yet</string>
+    <string name="str_photo">Photo</string>
+    <string name="str_video">Video</string>
+
+    <string name="record_detect">Motion detection alarm</string>
+    <string name="record_dismantle">Dismantle alarm</string>
+    <string name="record_433">%1$s alarm</string>
+    <string name="record_call_ok">Answered calls</string>
+    <string name="record_call_no">Missed calls </string>
+    <string name="record_low_charge">Low charge </string>
+    <!-- 设置 -->
+    <string name="ring_call">Call Ringtone</string>
+    <string name="ring_alarm">Alarm Ringtone</string>
+    <string name="str_vibrate">Vibrate</string>
+    <string name="str_about">About</string>
+    <string name="str_exit">Exit</string>
+    <string name="default_ring">Default(%1$s)</string>
+    <string name="default_ring_2">Default</string>
+    <string name="silent_ring">Mute</string>
+    <string name="exit_app">Exit the application?</string>
+    <string name="version_check">Version Update</string>
+    <string name="version_latest">Already the latest version</string>
+    <string name="no_version_latest">Get the latest version</string>
+    <string name="version_find">New version found</string>
+    <string name="update">update</string>
+
+    <!-- 列表删除界面 -->
+    <string name="deleting">Deleting...</string>
+    <string name="tips_delete_failed">Delete failed</string>
+    <string name="select_all">Select All</string>
+    <string name="delete_with_count">Delete(%1$d)</string>
+    <string name="tips_delete">Sure to delete?</string>
+
+
+    <!-- 添加设备 -->
+    <string name="add_dev">Add Device</string>
+    <string name="add_dev_failed">Failed to add device</string>
+    <string name="str_scan">Scan QR Code</string>
+    <string name="add_lan">Net search</string>
+
+    <string name="tips_add_scan">Add device by scan QR code</string>
+    <string name="choose_dev">Choose Device</string>
+    <string name="connect_dev">Connect the device</string>
+    <string name="wifi_set">WiFi Settings</string>
+    <string name="next_step">Next</string>
+    <string name="str_complete">Complete</string>
+
+    <!--<string name="tips_add_step_1">Connect the power supply , click [Next] button\n until you hear [start successfully]  and the indicator light turns blue </string>
+   <string name="tips_add_step_qr">Put the QR code against the camera,keep at about 1 meter.\r\n When you hear \"WiFi connection is successful\",click next step </string>
+    <string name="wifi_set_dev_dlg_msg">WiFi needs to connect to a device, do you want to connect</string>
+   -->
+    <string name="doorbell">Doorbell</string>
+    <string name="doorbell_text">Hold the ring button for 5 seconds.</string>
+    <string name="network_camera">Network camera</string>
+    <string name="network_camera_text">press the reset key of the device for 3~5 seconds until voice playback \"restore factory success\",
+        wait for device prompt \"start successfully\".</string>
+    <string name="tips_add_step_1"> Please put the device into the configuration WIFI mode.</string>
+    <string name="tips_add_step_qr"> Please put the QR code against the camera,keep at 30-50 cm.when hearing \"wireless information is successful\", you can remove the mobile phone.When listen to \"wireless connection success\", click the next step to add device. </string>
+    <string name="wifi_set_dev_dlg_msg"> WIFI needs to connect to the device AP that starts with \'AP_\'. do you want to connected?</string>
+
+    <string name="tips_add_step_2">Only 2.4G WiFi is supported</string>
+    <string name="tips_add_step_3">Make sure your phone and the device are connected to the same WiFi when pairing for the first time</string>
+
+    <string name="connect_dev_wifi">Connect the device WiFi</string>
+    <string name="tips_add_step_ap">The hotspot will connect your phone to the device, click next to continue</string>
+    <string name="wifi_name">WiFi:</string>
+    <string name="hint_wifi_pwd">Please enter the password</string>
+    <string name="tips_pwd_lengh_not_enough">The length of password is at least 8 </string>
+    <string name="wifi_set_dlg_title">WiFi Settings</string>
+    <string name="wifi_set_dlg_msg">WiFi is not connected, do you want to set up WiFi immediately</string>
+    <string name="wifi_set_dev_dlg_title">@string/connect_dev_wifi</string>
+
+    <string name="gps_set_dlg_title">Location Settings</string>
+    <string name="gps_set_dlg_msg">This Application needs to open the positioning function, do you want to set up immediately</string>
+
+    <string name="tips_configuring">Configuring,please wait...</string>
+    <string name="tips_result_ok">Congratulations! Add successfully</string>
+    <string name="tips_wifi_not_connect">WiFi is not connected</string>
+    <string name="tips_get_wifi_info">Getting WiFi information</string>
+    <string name="tips_add_failed_1">No devices found. Please try again later</string>
+    <string name="tips_reset_kj">Insert the network cable and try again</string>
+    <string name="tips_reset_1">Pairing failed, please follow the figure below, press the reset button for 3 seconds,\n reset the device, keep the device powered on</string>
+    <string name="tips_reset_2">Pairing failed, please follow the figure below,\n press the unlock button for 4 seconds, keep the device powered on</string>
+    <string name="tips_reset_3">Pairing failed, please follow the figure below, press the reset button for 5 seconds,\n reset the device, keep the device powered on</string>
+    <string name="tips_reset_ok">When you hear the voice prompts \n \"Reset the product successfully\"\n Indicates that the device has been reset successfully</string>
+    <string name="btn_reset_ok">I have reset successfully</string>
+    <string name="tips_reset_4">If the pairing fails, please follow the figure below.\n Press and hold the call key for 10 seconds and keep the unit powered on</string>
+
+    <string name="wifi_change">Change</string>
+    <string name="choose_wifi">Choose a WiFi</string>
+
+    <string name="searching">Searching for device</string>
+    <string name="tips_empty_dev">Not yet found</string>
+    <string name="add">Add</string>
+    <string name="retry">Retry</string>
+    <string name="added">Added</string>
+
+    <!-- 添加方式相关 -->
+    <string name="ap_config">Ap config</string>
+    <string name="wired_config">Wired config</string>
+    <string name="qrcode_config">QR code(recommend)</string>
+
+    <string name="ap_desc">Mobile connect to device\'s WiFi</string>
+    <string name="wired_desc">The camera connect to the router with a network cable</string>
+    <string name="qrcode_desc">Use camera to scan the QR code</string>
+
+    <string name="add_help">How to connect the device</string>
+
+    <!-- 添加帮助 -->
+    <string name="add_help_title">Network configuration help</string>
+    <string name="add_help_content">1. Device supports only access to 2.4G WiFi, and does not support 5G WiFi.\n2. Device don\'t support WPA/WPA2 enterprise class WiFi.\n3. WiFi SSID of Router can\'t be hidden.\n4. Routers can\'t enable AP isolation, anti friction network and other options of restrictions WiFi access.\n5. If the device sound that the \"WIFI\" connection failed, Please check that the configured WiFi SSID and password are correct.\n6. Enter WIFI network configuration mode,Press the Reset button of camera 3-5 seconds, device prompte \"restore factory success\" and then  device reboot, waiting for device prompt \"startup success \" or please use the mobile phone APP configuration WIFI name and password \".\n7. The mode of QR code and AP configurate network operation success only the device entern the WIFI configurate mode.\n8. The camer of Mobile phone can\'t scan QR code, please QR codes in front of the camera 30-50 cm, adjust the distance, usually 2-3 seconds can be successful.\n9. AP configuration network, the need for mobile connected to device\'s AP, device\'s AP called AP_*.</string>
+
+
+    <!-- 二维码名片 -->
+    <string name="qr_code_tips">Share your device by share the QR code</string>
+    <string name="qr_title">QR Code</string>
+    <string name="qr_share">Share</string>
+    <string name="qr_share_to">Share to</string>
+
+
+    <!-- 图片选择弹出框相关 -->
+    <string name="take_photo">Take Photo</string>
+    <string name="choose_form_album">Select from the photo album</string>
+    <string name="restore_to_default">Restore to default</string>
+
+
+    <!-- 相册选择 -->
+    <string name="image_count">%1$d</string>
+    <string name="album_all">All Pictures</string>
+    <string name="str_album">Photo Album</string>
+    <string name="choose_album">Select an album</string>
+    <string name="album_device">Device Album</string>
+    <string name="album_local">Local Album</string>
+    <string name="toast_cannot_retrieve_selected_image">Cannot retrieve selected image</string>
+    <string name="toast_cannot_retrieve_cropped_image">Cannot retrieve cropped image</string>
+    <string name="toast_unexpected_error">Unexpected error</string>
+
+
+    <!-- 呼叫等待 -->
+    <string name="other_user_answered">Other users have been connected</string>
+    <string name="p2p_disconnect">Session has been disconnected</string>
+    <string name="desc_movement">Movement alarm occurs</string>
+    <string name="desc_alarm_dismantle">Dismantle alarm occurs</string>
+    <string name="desc_alarm_433">%1$s alarm occurs </string>
+    <string name="desc_alarm_other">Alarm</string>
+    <string name="record_call">Visitor</string>
+
+    <!-- 视频通话 -->
+    <string name="unlock">Unlock</string>
+    <string name="hangup">Hangup</string>
+    <string name="answer">Answer</string>
+    <string name="close">Close</string>
+    <string name="watch">Watch</string>
+
+    <string name="resolution_h">High Definition</string>
+    <string name="resolution_m">Standard Definition</string>
+    <string name="resolution_l">Low Definition</string>
+    <string name="resolution_h_simple">HD</string>
+    <string name="resolution_m_simple">SD</string>
+    <string name="resolution_l_simple">LD</string>
+
+    <string name="stream_main">Main Stream</string>
+    <string name="stream_secondary">Secondary Stream</string>
+    <string name="stream_main_simple">Main S</string>
+    <string name="stream_secondary_simple">Secondary S</string>
+
+
+    <string name="tips_unlock_listening">Cannot open the door during monitor</string>
+    <string name="tips_unlock_alarm">Cannot open the door when alarm occurs</string>
+    <string name="tips_unlock">Need unlock?</string>
+    <string name="lock_door">Lock of door</string>
+    <string name="lock_gate">Lock of gate</string>
+    <string name="video_fetching">Fetching videos…</string>
+    <string name="get_video_failed">Video capture failed</string>
+    <string name="tips_camera_monitor">Drag the video window in 4 directions,\n Adjust picture perspective</string>
+    <string name="i_see">I See</string>
+    <string name="sd_not_exist_photo">The device does not have SD card,save photo failed</string>
+    <string name="sd_size_not_enough">The memory of SD card is not enough, please clean up it before take video</string>
+    <string name="photo_failed">Take photo failed</string>
+    <string name="photo_success">Take photo successfully</string>
+
+    <string name="tips_wake_up">Waking up</string>
+    <string name="tips_dev_online">Device is online</string>
+    <string name="tips_calling">Calling</string>
+    <string name="tips_monitoring">Monitoring</string>
+    <string name="tips_talking">Talking</string>
+    <string name="tips_alarm_detect">Motion detection alarm</string>
+    <string name="tips_alarm_dismantle">Dismantle alarm</string>
+
+
+    <!-- 设备设置 V2 -->
+    <string name="dev_set">Device Configuration</string>
+    <string name="dev_set_bg">Set background</string>
+    <string name="dev_set_pwd">Modify password</string>
+    <string name="cur_wifi">Current WiFi</string>
+    <string name="dev_name">Device Name</string>
+    <string name="motion_detect">Motion Detection</string>
+    <string name="missed">Missed</string>
+    <string name="answered">Answered</string>
+    <string name="infrared_alarm">Infrared Alarm</string>
+    <string name="qr_code_card">QR Code</string>
+    <string name="has_been_open_one">Every Night</string>
+    <string name="has_been_open_one_two">24 Hours</string>
+    <!--    <string name="has_been_open_one_three">已开启\n</string>-->
+    <string name="not_been_open">OFF</string>
+    <string name="pir_open">PIR alarm open</string>
+    <string name="alarm_remove_open">Dismantle alarm open</string>
+    <string name="pir_alarm_remove_open">PIR alarm and dismantle alarm open</string>
+
+    <string name="deployment">Deployment</string>
+    <string name="tips_empty_subdev">No related device</string>
+    <string name="check_code">Match Device</string>
+    <string name="modify_pwd">Modify Password</string>
+    <string name="auto_record">Auto Record</string>
+    <string name="power_frequency">Power mode</string>
+    <string name="adjust_voice">Adjust Volume</string>
+    <string name="time_zone">Time Zone</string>
+    <string name="dev_language">Device Language</string>
+    <string name="sdcard">SD Card</string>
+    <string name="restore_factory">Factory Default</string>
+    <string name="restart_dev">Device Reboot</string>
+    <string name="status_ok">Status OK</string>
+    <string name="status_block">Do not disturb</string>
+    <string name="dev_block">Do not disturb</string>
+    <string name="tab_dev_set_1">User</string>
+    <string name="tab_dev_set_2">Device</string>
+    <string name="tab_dev_set_3">Relation</string>
+    <string name="choose_language">Please choose the language</string>
+    <string name="need_restart_dev">Want to reboot the device?</string>
+    <string name="need_restore_factory">Back to factory default?</string>
+    <string name="rebooting">Rebooting...</string>
+    <string name="restoring">Restoring...</string>
+    <string name="version_info">Version</string>
+    <string name="dev_sys">Device System</string>
+    <string name="downloading">Device system is Upgrading..., %1$d completed</string>
+    <string name="downloading_with_progress">Device system is Upgrading..., %1$d completed</string>
+    <string name="tips_version">A new system version was found.\r\n The latest system gives you a better application</string>
+    <string name="update_success">Upgrade successfully, need to re-configure WiFi</string>
+    <string name="update_failed">Upgrade failed</string>
+
+    <string name="pir">Sensitivity</string>
+
+
+    <!-- 移动侦测 -->
+    <string name="mode_night">Night Mode</string>
+    <string name="mode_day">All Day</string>
+    <string name="mode_custom">Detection Area</string>
+    <string name="mode_record">Triggering videos</string>
+    <string name="mode_audio">Alarm sound</string>
+    <string name="start_time">Start Time</string>
+    <string name="end_time">End Time</string>
+    <string name="mode_pir">PIR Alarm</string>
+    <string name="mode_alarm">Dismantle Alarm</string>
+    <string name="charge_alarm">Low Electricity Alarm</string>
+    <string name="mode_record_time">Recording Time</string>
+    <string name="record_time_desc">%d seconds</string>
+    <string name="unit_sec">seconds</string>
+
+    <!-- 设备类型名 -->
+    <string name="type_ipc">IPC</string>
+    <string name="type_ipcc">IPCC</string>
+    <string name="type_ipfc">IPFC</string>
+    <string name="type_bell_unidirectional">DoorBell</string>
+    <string name="type_bell_bi_directional">DoorBell</string>
+    <string name="type_cat_eye">Door Viewer</string>
+
+
+    <!-- SD卡 -->
+    <string name="sdcard_status">SD card status</string>
+    <string name="storage_space">Storage space</string>
+    <string name="sdcard_read_only">SD card read-only, please format first</string>
+    <string name="format">Format</string>
+    <string name="storage_used">Used: %1$s</string>
+    <string name="storage_rest">Available: %1$s</string>
+    <string name="sd_not_format">SD card not formatting yet</string>
+    <string name="tips_format_sd_card">All storage in SD card will be deleted if you choose formatting,\n sure to continue?</string>
+    <string name="formating">Formatting...</string>
+    <string name="get_sd_failed">SD card status acquisition failed</string>
+    <string name="format_success">SD card format succeed</string>
+    <string name="sd_no_exist">SD card inexistent</string>
+    <string name="dev_no_support_sd">SD card read-write unsupported on the device</string>
+    <string name="sd_no_exist_format">SD card already pulled out, format failed</string>
+    <string name="formating_with_progress">Formatting..., %1$d completed</string>
+
+    <!-- 查看图片 -->
+    <string name="title_photo">@string/str_photo</string>
+    <string name="tips_del_pic">Sure to delete the photo?</string>
+
+    <!-- 查看视频 -->
+    <string name="tips_del_video">Sure to delete this video?</string>
+
+    <!-- 修改密码页 -->
+    <string name="hint_pwd_orig">Input the original password</string>
+    <string name="hint_pwd_new">Input your new password</string>
+    <string name="hint_pwd_new2">Input your new password again</string>
+    <string name="tips_err_pwd_orig">Original password error</string>
+    <string name="tips_err_pwd_new_2">The new password does not enter twice</string>
+    <string name="tips_err_pwd_same">Original password and new password cannot the same</string>
+    <string name="tips_err_pwd">The password is error</string>
+    <string name="tips_err_user">The user name is error</string>
+    <string name="tips_err_set">Setup failed</string>
+    <string name="tips_err_default_pwd">For security reason, please change your password.</string>
+
+    <!-- 视频回放 -->
+    <string name="title_choose_date">Choose date</string>
+    <string name="title_dev_video">Device videos</string>
+    <string name="file_mgr">File manage</string>
+    <string name="tips_empty_file">No file yet</string>
+    <string name="tips_loading_video">Loading video list...</string>
+
+    <!-- 帮助中心  -->
+    <string name="help_center">Help Center</string>
+    <string name="help_push">1. When you application can\'t get notifications</string>
+    <string name="help_permission">2. The function of mic\video\cameras can\'t available</string>
+
+    <string name="help_push_desc">To ensure that the camera is prompted for normal use, follow the prompts below to enable self-startig  management.Need to add the application to the [Self-starting management] list, or kill the process or restart phone can\'t receive notifications.\n\nMIUI\nNotification bar settings: the application is displayed by default notice bar notification, —- if closed, then the notice will not be prompted\nNetwork Assistant: You can manually disable the installation of third-party programs to access 2G / 3G and WIFI networks and set up after the new installer whether to allow access to 2G / 3G and WIFI networks\nHuawei:\nBackground application protection: the need to manually add the application to this list, or Device into sleep will automatically kill the application process, only manually open the application to resume operation Notification management: There are three application states: prompt, allow, disable. Forbid the application, the notification bar will not have any reminder\nIn the [battery] option to remove the J [background clean] check\nFlyme:\nNotification bar push: Close the app notification to receive the message without any impressions\nPower management: safe center set the power saving mode, in the [standby power consumption management] allows the application standby, keep allowed, other wise the phone sleep or application idle for some time, can not receive the message0\nVIVO:\nMemory a key to clean up: the need to join the application [white list] list, otherwise the system comes with a key to speed up, will kill the process\nOPPO:\nFrozen application management: the need to add the application to the background, or lock screen state can not receive the message\nSamsung\nMemory a key to clean up: you need to join the application [white list] list,, otherwise the system will kill the application process when the system memory is optimized</string>
+
+    <string name="help_permission_desc">APP needs to get access to the relevant permissions to work properly. Enter Setting->system\'s permission management-> select the application, open all permissions and add to the trust.</string>
+
+
+    <string name="permission_center">Permission Center</string>
+    <string name="permission_notification_bar">Notification</string>
+    <string name="permission_ignore_battery">Ignore battery optimization</string>
+
+    <string name="permission_lock_screen">Lock screen</string>
+    <string name="permission_autorun">Autorun</string>
+    <string name="permission_background">Background to protect</string>
+    <string name="permission_notification_msg">The detection application does not get the notice permissions, may miss the important information!To set up?</string>
+    <string name="permission_background_msg">Open the “IGuarder” app and then operate the phone menu button. Find “IGuarder” and click on the small lock in the upper right corner to lock the program.</string>
+
+    <!-- 433 子设备 -->
+    <string name="dev_type">Device Type</string>
+    <string name="sub_type_1">Telecontrol</string>
+    <string name="sub_type_2">Alarm</string>
+    <string name="sub_type_3">Other</string>
+    <string name="cfg_433_ok">Match success</string>
+    <string name="cfg_433_timeout">Match time out</string>
+    <string name="cfg_433_max">Device has reached the maximum</string>
+    <string name="cfg_433_waiting">Waiting...</string>
+    <string name="cfg_433_exists">The device has already exists</string>
+    <string name="tips_checking_code">Matching device now, please wait...</string>
+    <string name="choose_dev_type">Please choose the device type</string>
+
+    <string name="under_development">This feature is under development</string>
+    <string name="white_list">Please add "IGuarder" into the white list.</string>
+    <string name="Filevideo_event_ringbell_answer">Received calls</string>
+    <string name="Filevideo_event_ringbell_no_answer">Missed call</string>
+    <string name="Filevideo_event_pir">Pir alarm</string>
+    <string name="Filevideo_event_motiondect">Motion detection alarm</string>
+    <string name="Item_wake_up">Wake up</string>
+
+    <string name="tips_exit_app">Are you sure to exit application? It will close the notification from you device.</string>
+</resources>

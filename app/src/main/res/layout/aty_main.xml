@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="0dp">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/action_bar"
+            app:contentInsetStart="0dp"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:theme="@style/ToolbarTheme">
+
+
+            <FrameLayout
+                android:id="@+id/ly_top_dev"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/ic_refresh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/bg_common_tran_selector"
+                    android:paddingBottom="3dip"
+                    android:paddingLeft="8dip"
+                    android:paddingRight="8dip"
+                    android:paddingTop="3dip"
+                    android:src="@mipmap/ic_refresh" />
+
+                <TextView
+                    android:id="@+id/tv_title_dev"
+                    style="@style/text_title"
+                    android:text="@string/title_device" />
+
+                <com.nicky.framework.progressbar.CircularProgressBar
+                    android:id="@+id/loading_progress"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_marginLeft="15dip"
+                    android:indeterminate="true"
+                    android:indeterminateOnly="false"
+                    android:visibility="gone"
+                    app:cpb_colors="@array/refresh_colors"
+                    app:cpb_stroke_width="2.0dip" />
+
+                <ImageView
+                    android:id="@+id/ic_add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/bg_common_tran_selector"
+                    android:paddingBottom="3dip"
+                    android:paddingLeft="8dip"
+                    android:paddingRight="8dip"
+                    android:paddingTop="3dip"
+                    android:src="@mipmap/ic_menu_add" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/ly_top_record"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/ly_record"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dip"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_photo"
+                        android:layout_width="85dip"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/tab_record_left_selector"
+                        android:gravity="center"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:text="@string/str_photo"
+                        android:textColor="@color/tab_record_text_selector"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_video"
+                        android:layout_width="85dip"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/tab_record_right_selector"
+                        android:gravity="center"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:text="@string/str_video"
+                        android:textColor="@color/tab_record_text_selector"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <FrameLayout
+                    android:id="@+id/ly_photo_del"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginRight="5dip">
+
+                    <ImageView
+                        android:id="@+id/ic_del_photo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_common_tran_selector"
+                        android:paddingBottom="3dip"
+                        android:paddingLeft="8dip"
+                        android:paddingRight="8dip"
+                        android:paddingTop="3dip"
+                        android:src="@mipmap/ic_menu_del"
+                        android:visibility="gone" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/ly_video_del"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginRight="5dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/ic_del_video"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_common_tran_selector"
+                        android:paddingBottom="3dip"
+                        android:paddingLeft="8dip"
+                        android:paddingRight="8dip"
+                        android:paddingTop="3dip"
+                        android:src="@mipmap/ic_menu_del"
+                        android:visibility="gone" />
+                </FrameLayout>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/ly_top_msg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_title_msg"
+                    style="@style/text_title"
+                    android:text="@string/str_message" />
+
+                <ImageView
+                    android:id="@+id/ic_del_msg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginRight="5dip"
+                    android:background="@drawable/bg_common_tran_selector"
+                    android:paddingBottom="3dip"
+                    android:paddingLeft="8dip"
+                    android:paddingRight="8dip"
+                    android:paddingTop="3dip"
+                    android:src="@mipmap/ic_menu_del"
+                    android:visibility="gone" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/ly_top_set"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_title_set"
+                    style="@style/text_title"
+                    android:text="@string/str_settings" />
+            </FrameLayout>
+
+
+        </android.support.v7.widget.Toolbar>
+
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <com.nicky.framework.widget.XViewPager
+            android:id="@+id/vp_main"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1.0" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_height"
+            android:background="@color/divider" />
+
+        <LinearLayout
+            android:id="@+id/main_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/tab_dev"
+                style="@style/tab_home">
+
+                <TextView
+                    android:id="@+id/tv_dev"
+                    style="@style/text_common"
+                    android:layout_centerInParent="true"
+                    android:drawableTop="@drawable/tab_home_tab1_selector"
+                    android:gravity="bottom|center_horizontal"
+                    android:text="@string/str_device"
+                    android:textColor="@color/tab_main_text_selector" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/tab_record"
+                style="@style/tab_home">
+
+                <TextView
+                    android:id="@+id/tv_record"
+                    style="@style/text_common"
+                    android:layout_centerInParent="true"
+                    android:drawableTop="@drawable/tab_home_tab2_selector"
+                    android:gravity="bottom|center_horizontal"
+                    android:text="@string/str_record"
+                    android:textColor="@color/tab_main_text_selector" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/tab_msg"
+                style="@style/tab_home">
+
+                <TextView
+                    android:id="@+id/tv_msg"
+                    style="@style/text_common"
+                    android:layout_centerInParent="true"
+                    android:drawableTop="@drawable/tab_home_tab3_selector"
+                    android:gravity="bottom|center_horizontal"
+                    android:text="@string/str_message"
+                    android:textColor="@color/tab_main_text_selector" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/tab_set"
+                style="@style/tab_home">
+
+                <TextView
+                    android:id="@+id/tv_set"
+                    style="@style/text_common"
+                    android:layout_centerInParent="true"
+                    android:drawableTop="@drawable/tab_home_tab4_selector"
+                    android:gravity="bottom|center_horizontal"
+                    android:text="@string/str_settings"
+                    android:textColor="@color/tab_main_text_selector" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>
+
+
+
+
+

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Table Item(Edit) -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:id="@+id/layout_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/common_size_10"
+        android:orientation="horizontal" >
+
+        <!--
+    android:descendantFocusability="blocksDescendants"
+    android:duplicateParentState="true"
+        -->
+
+
+        <ImageView
+            android:id="@+id/icon_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="2dip"
+            android:layout_marginRight="@dimen/common_size_10"
+            android:scaleType="centerInside" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            style="@style/table_view_name"
+            android:minEms="3"
+            android:layout_width="wrap_content"/>
+
+        <com.nicky.framework.widget.XEditText
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/et_item"
+            style="@style/edit_common"
+            android:layout_width="0dip"
+            android:layout_height="40dip"
+            android:layout_marginRight="10dip"
+            android:layout_weight="1.0"
+            android:paddingLeft="5dip"
+            android:paddingRight="5dip"
+            android:textColor="@color/color_table_view_name"
+            android:textSize="@dimen/text_14"
+            app:rightIconType="none"
+            app:noEmoji="true" />
+        <!--
+         android:minHeight="40dip"
+        android:background="@null"
+         android:inputType="textMultiLine"
+        -->
+
+        <TextView
+            android:id="@+id/tv_value"
+            style="@style/table_view_value"
+            android:layout_marginLeft="10dip"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iocn_right"
+            style="@style/list_item_chevron"
+            android:visibility="gone" />
+    </LinearLayout>
+    
+    <View
+        android:id="@+id/bg_enable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/layout_item"
+        android:layout_alignBottom="@id/layout_item"
+        android:layout_alignLeft="@id/layout_item"
+        android:layout_alignRight="@id/layout_item"
+        android:visibility="gone"
+        android:alpha="0.7"
+        android:background="@color/white"
+        android:gravity="center_vertical" />
+    
+</RelativeLayout>
+
+

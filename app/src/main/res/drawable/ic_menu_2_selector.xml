@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<level-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:maxLevel="1">
+        <selector>
+            <item
+                android:drawable="@mipmap/bt_a2_02"
+                android:state_pressed="true" />
+            <item android:drawable="@mipmap/bt_a2_01" />
+        </selector>
+    </item>
+
+    <item android:maxLevel="2">
+        <selector>
+            <item
+                android:drawable="@mipmap/bt_aa2_02"
+                android:state_pressed="true" />
+            <item android:drawable="@mipmap/bt_aa2_01" />
+        </selector>
+    </item>
+</level-list>

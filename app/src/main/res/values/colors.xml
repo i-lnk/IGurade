@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="text_blue">@color/colorAccent</color>
+    <color name="home_color">@color/colorAccent</color>
+    <color name="btn_blue">@color/colorAccent</color>
+
+    <integer-array name="refresh_colors">
+        <item>@color/home_color</item>
+    </integer-array>
+
+    <color name="text_video_ctrl">#90A3AE</color>
+    <color name="text_video_green">#4CD966</color>
+
+    <color name="bg_common_press">#5EFFFFFF</color>
+
+    <color name="bg_about">#32A2DC</color>
+    <color name="yellow">#ffff00</color>
+
+</resources>

@@ -1,0 +1,108 @@
+apply plugin: 'com.android.application'
+apply plugin: 'android-apt'
+apply plugin: 'org.greenrobot.greendao'
+
+android {
+    aaptOptions.cruncherEnabled = false
+    aaptOptions.useNewCruncher = false
+    packagingOptions {
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/NOTICE.txt'
+    }
+    dexOptions {
+        javaMaxHeapSize "4g"
+        jumboMode true
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+    signingConfigs {
+        config {
+            storeFile file('../Geye')
+            keyAlias 'geye'
+            keyPassword '151617'
+            storePassword '151617'
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+    }
+    compileSdkVersion 27
+    buildToolsVersion '27.0.3'
+    defaultConfig {
+        minSdkVersion 17
+        targetSdkVersion 27
+        applicationId "com.rl.geye"
+        versionCode 71
+        versionName "1.7.3"
+        multiDexEnabled true
+
+        ndk {
+            abiFilters 'armeabi'
+        }
+        manifestPlaceholders = [
+                JPUSH_PKGNAME: applicationId,
+                JPUSH_APPKEY : "74bb64a1d36437eea2541594",
+                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+                // XIAOMI_APPKEY : "MI-5941767876803", // 小米平台注册的appkey
+                // XIAOMI_APPID : "MI-2882303761517678803",
+                // MEIZU_APPKEY : "MZ-fa6268747f0747edabe7d597a9915c98", // 魅族平台注册的appkey
+                // MEIZU_APPID : "MZ-112011", // 魅族平台注册的appid
+        ]
+        signingConfig signingConfigs.config
+    }
+    buildTypes {
+        release {
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            jniDebuggable true
+            minifyEnabled false
+            signingConfig signingConfigs.config
+        }
+        debug {
+            jniDebuggable true
+            signingConfig signingConfigs.config
+        }
+    }
+    greendao {
+        schemaVersion 3
+        // daoPackage  'com.rl.p2p.db'
+        // targetGenDir 'src/main/java'
+    }
+    productFlavors {
+    }
+}
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    apt 'com.jakewharton:butterknife-compiler:8.8.1'
+    compile 'com.jakewharton:butterknife:8.8.1'
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'com.afollestad.material-dialogs:core:0.9.4.5'
+    compile 'com.orhanobut:logger:2.1.1'
+    compile 'cn.aigestudio.wheelpicker:WheelPicker:1.1.2'
+    compile 'com.github.chrisbanes:PhotoView:1.3.0'
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.22'
+    // compile 'com.github.bumptech.glide:glide:4.0.0'
+    compile 'com.github.yalantis:ucrop:2.2.1-native'
+    compile 'org.greenrobot:greendao:3.2.2'
+    // This is only needed if you want to use encrypted databases
+    compile 'net.zetetic:android-database-sqlcipher:3.5.6'
+    // compile 'net.zetetic:android-database-sqlcipher:3.5.6@aar'
+    // compile 'net.zetetic:android-database-sqlcipher:3.5.7@aar'
+    compile 'com.lzy.net:okgo:2.1.4'
+    compile 'com.google.code.gson:gson:2.8.2'
+    compile 'com.prolificinteractive:material-calendarview:1.4.3'
+    compile 'com.google.firebase:firebase-messaging:11.8.0'
+    compile 'cn.jiguang.sdk:jpush:3.1.1'
+    compile 'cn.jiguang.sdk:jcore:1.1.9'
+    // compile 'cn.jiguang.sdk.plugin:xiaomi:3.1.0'
+    // compile 'cn.jiguang.sdk.plugin:huawei:3.1.0'
+    // compile 'cn.jiguang.sdk.plugin:meizu:3.1.0'
+    compile project(':framework')
+    compile project(':p2plib')
+    compile project(':keeplibrary')
+}
+apply plugin: 'com.google.gms.google-services'

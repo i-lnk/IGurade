@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 登录模块  透明背景  -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_checked="true" android:state_enabled="true">
+        <shape>
+            <corners android:radius="5dp" />
+            <solid android:color="#19FFFFFF" />
+        </shape>
+    </item>
+
+    <item android:state_enabled="true" android:state_pressed="true">
+        <shape>
+            <corners android:radius="5dp" />
+            <solid android:color="#19FFFFFF" />
+            <stroke android:width="0.8dip" android:color="@color/white" />
+        </shape>
+    </item>
+
+    <item android:state_enabled="true" android:state_selected="true">
+        <shape>
+            <corners android:radius="5dp" />
+            <solid android:color="#19FFFFFF" />
+            <stroke android:width="0.8dip" android:color="@color/white" />
+        </shape>
+    </item>
+
+    <item android:state_enabled="false">
+        <shape>
+            <corners android:radius="5dp" />
+            <solid android:color="#19FFFFFF" />
+            <stroke android:width="0.8dip" android:color="@color/white" />
+        </shape>
+    </item>
+
+    <item>
+        <shape>
+            <corners android:radius="5dp" />
+            <solid android:color="@color/transparent" />
+            <stroke android:width="0.8dip" android:color="@color/white" />
+        </shape>
+    </item>
+
+
+</selector>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--    <item android:state_pressed="true"
+            android:drawable="@drawable/btn_ok_press" />
+        <item android:state_selected="true"
+            android:drawable="@drawable/btn_ok_press" />-->
+    <item>
+        <shape>
+            <corners android:radius="18dip" />
+            <solid android:color="#4C000000" />
+            <stroke android:color="@color/transparent" />
+        </shape>
+    </item>
+</selector>

@@ -1,0 +1,73 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.keeplibrary">
+
+    <!--允许程序在手机屏幕关闭后后台进程仍然运行-->
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+
+    <!--允许程序开机自动运行-->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+
+    <!--允许程序收到广播后快速收到下一个广播-->
+    <uses-permission android:name="android.permission.BROADCAST_STICKY"/>
+
+    <application
+            android:allowBackup="true"
+            android:hardwareAccelerated="true"
+            android:label="@string/app_name"
+            android:largeHeap="true"
+            android:persistent="true"
+            android:supportsRtl="true">
+
+        <!--Keep scheduler sevice-->
+        <service
+                android:name=".KeepService"
+                android:enabled="true"
+                android:exported="true"
+                android:label="@string/action_keep_service_label"
+                android:permission="android.permission.BIND_JOB_SERVICE"
+                android:process=":keep">
+            <intent-filter>
+                <action android:name="keep.android.intent.action.ACTION_KEEP_SERVICE"/>
+            </intent-filter>
+        </service>
+
+        <!--Keep boot completed receiver-->
+        <receiver
+                android:name=".KeepBootCompletedReceiver"
+                android:enabled="true"
+                android:exported="true"
+                tools:ignore="ExportedReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+
+        <!--Keep shutdown receiver-->
+        <receiver
+                android:name=".KeepShutdownReceiver"
+                android:enabled="true"
+                android:exported="true"
+                tools:ignore="ExportedReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_SHUTDOWN"/>
+            </intent-filter>
+        </receiver>
+
+        <!--Keep action receiver-->
+        <receiver
+                android:name=".KeepActionReceiver"
+                android:enabled="true"
+                android:exported="true"
+                tools:ignore="ExportedReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT"/>
+                <action android:name="keep.android.intent.action.ACTION_KEEP_SERVICE"/>
+                <action android:name="keep.android.intent.action.ACTION_BOOT_COMPLETED"/>
+                <action android:name="keep.android.intent.ACTION_SHUTDOWN"/>
+            </intent-filter>
+        </receiver>
+
+    </application>
+</manifest>
+

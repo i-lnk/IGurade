@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<level-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:drawable="@mipmap/ic_status_offline"
+        android:maxLevel="1" /> <!-- 离线 -->
+    <item
+        android:drawable="@mipmap/ic_status_online"
+        android:maxLevel="2" /> <!-- 在线 -->
+    <item
+        android:drawable="@mipmap/ic_status_err"
+        android:maxLevel="3" /> <!-- 错误 -->
+
+
+</level-list>
+
+
+

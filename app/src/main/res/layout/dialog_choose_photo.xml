@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@color/transparent"
+        android:orientation="vertical">
+
+
+        <Button
+            android:id="@+id/btn_take_photo"
+            style="@style/text_common"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_corner_white_top"
+            android:gravity="center"
+            android:text="@string/take_photo"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/text_16" />
+        <!--        android:textColor="@color/text_color_comm" -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_height"
+            android:background="@color/divider" />
+
+        <Button
+            android:id="@+id/btn_choose_photo"
+            style="@style/text_common"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_corner_white_bottom"
+            android:gravity="center"
+            android:text="@string/choose_form_album"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/text_16" />
+
+        <Button
+            android:id="@+id/btn_reset"
+            style="@style/text_common"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/bg_corner_white_middle"
+            android:gravity="center"
+            android:text="@string/restore_to_default"
+            android:textAllCaps="false"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/text_16" />
+
+        <Button
+            android:id="@+id/btn_cancel"
+            style="@style/text_common"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/bg_corner_white_middle"
+            android:gravity="center"
+            android:text="@string/str_cancel"
+            android:textAllCaps="false"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/text_16" />
+
+    </LinearLayout>
+
+</LinearLayout>

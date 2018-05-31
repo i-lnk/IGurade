@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="common_loading_progress_size">35dp</dimen>
+    <dimen name="common_loading_text_margin">10dp</dimen>
+    <dimen name="common_loading_text_lines_spacing">5dp</dimen>
+
+    <dimen name="common_size_5">5dp</dimen>
+    <dimen name="common_size_10">10dp</dimen>
+    <dimen name="common_size_15">15dp</dimen>
+    <dimen name="common_size_20">20dp</dimen>
+    <dimen name="common_size_25">25dp</dimen>
+    <dimen name="common_size_30">30dp</dimen>
+    <dimen name="common_size_35">35dp</dimen>
+    <dimen name="actionBarSize">48dp</dimen>
+
+<!--    <dimen name="common_item_height">50dip</dimen> -->
+
+    <!-- UI table view  -->
+    <dimen name="table_min_height_v2">65dip</dimen>
+    <dimen name="table_min_height">50dip</dimen>
+    <dimen name="table_padding_top">5dp</dimen>
+    <dimen name="table_padding_bottom">5dp</dimen>
+    <dimen name="table_padding_left">8dp</dimen>
+    <dimen name="table_padding_right">8dp</dimen>
+    <dimen name="table_divider_height">0.8dp</dimen>
+
+
+
+    <!-- Text Size -->
+    <dimen name="text_18">18.0sp</dimen>
+    <dimen name="text_17">17.0sp</dimen>
+    <dimen name="text_16">16.0sp</dimen>
+    <dimen name="text_15">15.0sp</dimen>
+    <dimen name="text_14">14.0sp</dimen>
+    <dimen name="text_13">13.0sp</dimen>
+    <dimen name="text_12">12.0sp</dimen>
+    <dimen name="text_11">11.0sp</dimen>
+    <dimen name="text_10">10.0sp</dimen>
+
+    <dimen name="qr_code_edge_width">15dip</dimen><!--   -->
+    <dimen name="qr_code_edge_height">3dip</dimen><!--   -->
+
+</resources>

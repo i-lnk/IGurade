@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <!-- Common ids -->
+
+    <!-- SnackBar 提示显示位置 -->
+    <item name="snackbar_container" type="id" />
+
+
+    <!-- table view ids -->
+    <item name="tb_set_ring_call" type="id" />
+    <item name="tb_set_ring_alarm" type="id" />
+    <item name="tb_set_id_vibrate" type="id" />
+    <item name="tb_set_id_no_disturb" type="id" />
+    <item name="tb_set_about" type="id" />
+    <item name="tb_set_help" type="id" />
+    <item name="tb_set_permission" type="id" />
+    <item name="tb_set_notification" type="id" />
+    <item name="tb_set_ignore_battery" type="id" />
+    <item name="tb_set_lock_screen" type="id" />
+    <item name="tb_set_autostart" type="id" />
+    <item name="tb_set_background" type="id" />
+    <item name="tb_set_exit" type="id" />
+
+    <item name="tb_set_name" type="id" />
+    <item name="tb_set_pwd" type="id" />
+    <item name="tb_set_qr" type="id" />
+    <item name="tb_set_bg" type="id" />
+
+    <item name="tb_set_detect" type="id" />
+    <item name="tb_set_auto_record" type="id" />
+    <item name="tb_set_power_frequency" type="id" />
+    <item name="tb_set_adjust_voice" type="id" />
+    <item name="tb_set_time_zone" type="id" />
+    <item name="tb_set_language" type="id" />
+    <item name="tb_set_sd" type="id" />
+    <item name="tb_set_reset" type="id" />
+    <item name="tb_set_reboot" type="id" />
+    <item name="tb_set_system" type="id" />
+
+    <item name="tb_set_pir" type="id" />
+    <!--<item name="tb_help_push" type="id"/>-->
+    <!--<item name="tb_help_permission" type="id"/>-->
+
+
+    <!-- tag Key ids -->
+    <item name="key_position" type="id" />
+    <item name="key_data" type="id" />
+
+
+    <!-- Message ids -->
+    <item name="msg_refresh_p2p_aty" type="id" />
+    <item name="msg_refresh_p2p_frag" type="id" />
+    <item name="msg_update_name" type="id" />
+    <item name="msg_update_auto_record" type="id" />
+    <item name="msg_update_detect" type="id" />
+    <item name="msg_update_time_zone" type="id" />
+    <item name="msg_update_language" type="id" />
+    <item name="msg_update_sysinfo" type="id" />
+    <item name="msg_update_version" type="id" />
+    <!--    <item name="msg_update_success" type="id"/>-->
+    <item name="msg_update_progress" type="id" />
+    <item name="msg_update_disconnect" type="id" />
+    <item name="msg_update_poser" type="id" />
+    <item name="msg_update_voice" type="id" />
+    <item name="msg_update_wakeup" type="id" />
+
+
+</resources>

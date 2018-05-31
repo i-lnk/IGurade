@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/empty_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_window">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.0"
+            android:minHeight="5dp" />
+
+        <TextView
+            android:id="@+id/tv_welcome"
+            style="@style/text_common"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="@string/tips_welcome_to_use"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/text_15" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.0"
+            android:minHeight="5dp" />
+
+
+        <com.nicky.framework.widget.RippleView
+            android:id="@+id/ly_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:padding="5dp"
+            app:rv_centered="true"
+            app:rv_color="@color/white"
+            app:rv_rippleDuration="200"
+            app:rv_type="simpleRipple">
+
+            <ImageView
+                android:id="@+id/iv_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/a0_bt_add" />
+            <!--android:src="@drawable/ic_add_dev" -->
+
+        </com.nicky.framework.widget.RippleView>
+
+        <TextView
+            android:id="@+id/tv_add"
+            style="@style/text_common"
+            android:layout_marginTop="3dip"
+            android:gravity="center"
+            android:text="@string/add_dev"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/text_14" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.0"
+            android:minHeight="5dp" />
+
+        <com.nicky.framework.widget.RippleView
+            android:id="@+id/ly_add_lan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:padding="5dp"
+            app:rv_centered="true"
+            app:rv_color="@color/white"
+            app:rv_rippleDuration="200"
+            app:rv_type="simpleRipple">
+
+            <ImageView
+                android:id="@+id/iv_add_lan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/a0_bt_add2" />
+            <!--   android:src="@drawable/ic_scan_dev" -->
+        </com.nicky.framework.widget.RippleView>
+
+        <TextView
+            android:id="@+id/tv_add_lan"
+            style="@style/text_common"
+            android:layout_marginTop="3dip"
+            android:gravity="center"
+            android:text="@string/add_lan"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/text_14" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.0"
+            android:minHeight="5dp" />
+
+        <com.nicky.framework.widget.RippleView
+            android:id="@+id/ly_scan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:padding="5dp"
+            app:rv_centered="true"
+            app:rv_color="@color/white"
+            app:rv_rippleDuration="200"
+            app:rv_type="simpleRipple">
+
+            <ImageView
+                android:id="@+id/iv_scan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/a0_bt_scan" />
+            <!--   android:src="@drawable/ic_scan_dev" -->
+        </com.nicky.framework.widget.RippleView>
+
+        <TextView
+            android:id="@+id/tv_scan"
+            style="@style/text_common"
+            android:layout_marginTop="3dip"
+            android:gravity="center"
+            android:text="@string/str_scan"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/text_14" />
+
+
+        <TextView
+            android:id="@+id/tv_tips_add_scan"
+            style="@style/text_common"
+            android:layout_marginTop="5dip"
+            android:gravity="bottom|center_horizontal"
+            android:text="@string/tips_add_scan"
+            android:textColor="@color/text_hint"
+            android:textSize="@dimen/text_14" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.0"
+            android:minHeight="5dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

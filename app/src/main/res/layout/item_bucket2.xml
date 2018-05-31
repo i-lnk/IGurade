@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ly_bucket"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingBottom="5dip"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:paddingTop="5dip">
+
+        <ImageView
+            android:id="@+id/iv_bucket"
+            android:layout_width="92dip"
+            android:layout_height="92dip"
+            android:layout_marginRight="10dip"
+            android:background="@mipmap/pic_dir"
+            android:paddingBottom="15dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="9dp"
+            android:scaleType="centerCrop" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_name"
+                style="@style/text_common"
+                android:text="@string/album_local"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/text_16" />
+
+            <TextView
+                android:id="@+id/tv_count"
+                style="@style/text_common"
+                android:layout_marginTop="3dip"
+                android:text="@string/album_local"
+                android:textColor="@color/text_hint"
+                android:textSize="@dimen/text_14" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_height"
+        android:background="@color/divider" />
+
+
+</LinearLayout>

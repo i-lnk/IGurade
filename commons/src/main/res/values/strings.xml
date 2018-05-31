@@ -1,0 +1,23 @@
+<resources>
+    <string name="tips_input_no_emoji2"> Cannot contain Emoji! </string>
+    <string name="tips_input_no_chinese"> Cannot contain Chinse! </string>
+    <string name="tips_input_max_length2"> Limited to a maximum of %1$d characters! </string>
+
+    <string name="sunday_full">Sunday</string>
+    <string name="monday_full">Monday</string>
+    <string name="tuesday_full">Tuesday</string>
+    <string name="wednesday_full">Wednesday</string>
+    <string name="thursday_full">Thursday</string>
+    <string name="friday_full">Friday</string>
+    <string name="saturday_full">Saturday</string>
+
+    <string name="am">AM</string>
+    <string name="pm">PM</string>
+    <string name="yesterday">Yesterday</string>
+
+    <string name="err_data">Wrong Data</string>
+
+
+
+
+</resources>

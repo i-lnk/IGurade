@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!-- 自定义RelativeLayout(自动隐藏、点击弹出,隐藏与显示时有动画效果 ) -->
+    <declare-styleable name="CtrlLayout">
+        <!--        <attr name="isBottom" format="boolean"/> &lt;!&ndash; 是否位于底部 &ndash;&gt;-->
+        <attr name="moveDistance" format="dimension" /><!-- 动画移动距离 -->
+        <attr name="stickIds" format="dimension" /><!--  -->
+        <attr name="move_direction">
+            <enum name="left" value="0" />
+            <enum name="right" value="1" />
+            <enum name="up" value="2" />
+            <enum name="down" value="3" />
+        </attr>
+
+
+    </declare-styleable>
+
+
+</resources>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 透明底,选中变淡蓝  -->
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/bg_window_60tran_press"
+    android:exitFadeDuration="@android:integer/config_shortAnimTime"> //点击时波纹的颜色
+
+
+<!--    <item
+        android:drawable="@color/bg_popup" />//未点击时控件的颜色-->
+
+
+    <item android:id="@android:id/mask">
+        <shape android:shape="rectangle">
+            <corners android:radius="3dp"/>
+            <!-- This color is needed to be set - doesn't affect anything -->
+            <solid android:color="@android:color/white"/>
+        </shape>
+    </item>
+    <!-- This is the background for your button -->
+    <item>
+        <!-- Use the shape you want here -->
+        <shape android:shape="rectangle">
+            <!-- Use the solid tag to define the background color you want -->
+            <solid android:color="@android:color/transparent"/>
+        </shape>
+    </item>
+
+</ripple>
+

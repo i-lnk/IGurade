@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        android:background="@drawable/bg_corner"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/text_common"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="15dip"
+            android:layout_marginRight="15dip"
+            android:layout_marginTop="15dip"
+            android:paddingLeft="8dip"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/text_18" />
+
+        <View
+            android:id="@+id/top_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="@color/colorAccent" />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/ly_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dip">
+
+            <com.nicky.framework.widget.XEditText xmlns:xEdit="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/et_content"
+                style="@style/edit_common"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_view_height"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="18dip"
+                android:layout_marginLeft="15dip"
+                android:layout_marginRight="15dip"
+                android:layout_marginTop="5dip"
+                android:drawableRight="@drawable/ic_clear_selector"
+                android:gravity="bottom"
+                android:paddingLeft="6dip"
+                android:textSize="@dimen/text_16"
+                xEdit:noEmoji="true"
+                xEdit:rightIconType="cleanContent" />
+        </android.support.design.widget.TextInputLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_height"
+            android:background="@color/divider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/input_view_height"
+                android:layout_weight="1"
+                android:background="@drawable/bg_corner_white_left_bottom"
+                android:text="@string/str_cancel"
+                android:textAllCaps="false"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/text_16" />
+
+            <View
+                android:layout_width="@dimen/divider_height"
+                android:layout_height="match_parent"
+                android:background="@color/divider" />
+
+            <Button
+                android:id="@+id/btn_ok"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/input_view_height"
+                android:layout_weight="1"
+                android:background="@drawable/bg_corner_white_right_bottom"
+                android:text="@string/str_ok"
+                android:textAllCaps="false"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/text_16" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,37 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="common_item_height">50dip</dimen>
+    <dimen name="snackbar_height">46dip</dimen>
+    <dimen name="input_view_height">45dp</dimen>
+    <dimen name="divider_height">0.8dip</dimen>
+    <dimen name="divider_height_1px">1px</dimen>
+
+    <!-- PHOTO BUCKET LIST -->
+    <dimen name="item_bucket_height">105dip</dimen><!-- 相册列表行高  -->
+    <dimen name="item_bucket_list_height">420dip</dimen><!-- 相册列表高  -->
+    <dimen name="item_bucket_menu_height">45dip</dimen><!-- 相册列菜单高  -->
+    <dimen name="item_bucket_translation_y_height">465dip</dimen><!-- 相册列表偏移值  -->
+
+    <!-- List -->
+    <dimen name="list_item_height">@dimen/common_item_height</dimen>
+
+    <!--  Wheel -->
+    <dimen name="wheel_text_size">24.0sp</dimen>
+    <dimen name="wheel_padding">15dp</dimen>
+    <dimen name="wheel_item_space">26dp</dimen>
+
+    <!-- 日历  -->
+    <dimen name="dot_radius">3dp</dimen>
+    <dimen name="left_right_margin">50dp</dimen>
+
+
+    <!-- Dialog -->
+    <dimen name="dialog_list_min_height">101dip</dimen>
+    <dimen name="dialog_list_max_height">251dip</dimen>
+
+
+    <dimen name="random_point_size">30dip</dimen>
+    <dimen name="search_padding_left">10dip</dimen>
+
+</resources>

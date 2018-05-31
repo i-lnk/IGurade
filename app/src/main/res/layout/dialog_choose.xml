@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@drawable/bg_corner"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/text_common"
+            android:layout_width="match_parent"
+            android:layout_margin="10dip"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/text_18" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="@color/colorAccent" />
+
+        <!-- ITEM 50dp  -->
+        <FrameLayout
+            android:id="@+id/layout_max"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dialog_list_max_height"
+            android:visibility="gone">
+
+            <com.nicky.framework.slidinglayout.SlidingLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                app:sliding_mode="both">
+
+                <ListView
+                    android:id="@+id/listview_max"
+                    style="@style/listView_common"
+                    android:layout_height="match_parent" />
+            </com.nicky.framework.slidinglayout.SlidingLayout>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/layout_min"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/dialog_list_min_height"
+            android:visibility="visible">
+
+            <com.nicky.framework.slidinglayout.SlidingLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                app:sliding_mode="both">
+
+                <ListView
+                    android:id="@+id/listview_min"
+                    style="@style/listView_common"
+                    android:layout_height="wrap_content" />
+            </com.nicky.framework.slidinglayout.SlidingLayout>
+        </FrameLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

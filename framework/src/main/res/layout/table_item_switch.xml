@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Table Item(带开关按钮) -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:id="@+id/layout_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:descendantFocusability="blocksDescendants"
+        android:duplicateParentState="true"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/common_size_10"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/icon_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/common_size_10"
+            android:scaleType="centerInside" />
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_name"
+                style="@style/table_view_name"/>
+
+            <TextView
+                android:id="@+id/tv_desc"
+                style="@style/table_view_desc"
+                android:layout_marginTop="3dip"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <android.support.v7.widget.SwitchCompat
+            android:id="@+id/switch_item"
+            android:layout_width="80dip"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:textOff="OFF"
+            android:textOn="ON" />
+<!--
+android:thumb="@drawable/ic_switch_selector"
+app:track="@drawable/ic_switch_selector"
+        <CheckBox
+            android:id="@+id/switch_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="5dip"
+            android:background="@drawable/ic_switch_selector"
+            android:button="@null" />-->
+
+        <!--
+      <Switch 
+         android:id="@+id/switch_item"
+         android:layout_marginLeft="10dip"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:button="@null"
+         android:checked="false"
+         android:textOn=""
+         android:textOff=""
+         android:background="@drawable/ic_switch_selector"
+         />
+        -->
+
+        <ImageView
+            android:id="@+id/iocn_right"
+            style="@style/list_item_chevron"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/bg_enable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/layout_item"
+        android:layout_alignLeft="@id/layout_item"
+        android:layout_alignRight="@id/layout_item"
+        android:layout_alignTop="@id/layout_item"
+        android:alpha="0.7"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:visibility="gone" />
+
+</RelativeLayout>

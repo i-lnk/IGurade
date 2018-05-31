@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 竖屏时视频加载 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ly_progress"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <com.nicky.framework.progressbar.CircularProgressBar
+        android:id="@+id/pb_video"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="8dip"
+        android:layout_marginTop="2dip"
+        android:indeterminate="true"
+        android:indeterminateOnly="false"
+        app:cpb_colors="@array/gplus_colors"
+        app:cpb_stroke_width="4.0dip" />
+
+    <TextView
+        style="@style/text_common"
+        android:layout_width="wrap_content"
+        android:gravity="center"
+        android:text="@string/video_fetching"
+        android:textColor="@color/text_video_ctrl"
+        android:textSize="@dimen/text_16" />
+</LinearLayout>

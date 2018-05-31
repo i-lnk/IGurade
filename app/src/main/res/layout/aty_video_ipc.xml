@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ly_all"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <com.nicky.framework.widget.XRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.opengl.GLSurfaceView
+            android:id="@+id/sv_video"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+        <FrameLayout
+            android:id="@+id/ly_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black" />
+
+        <!-- 视频加载 -->
+        <include layout="@layout/port_bell_progress" />
+
+
+        <!-- 视频控制栏(麦克风、扩音、翻转 ) -->
+        <include layout="@layout/land_ipc_ctrl" />
+
+        <!-- 拍照 录像 -->
+        <include layout="@layout/land_ipc_photo_video" />
+
+
+        <!-- 底部控制 -->
+        <include layout="@layout/land_ipc_bottom" />
+
+
+        <!--        <include layout="@layout/view_set_menu" />-->
+
+
+        <!-- 视频时间栏(连接时间、录像时间) -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingBottom="10dip">
+
+            <include layout="@layout/port_bell_time" />
+
+            <TextView
+                android:id="@+id/tv_tips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:text="@string/app_name"
+                android:textColor="@color/text_video_green"
+                android:textSize="@dimen/text_14" />
+
+        </LinearLayout>
+
+
+    </com.nicky.framework.widget.XRelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_guide"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.5"
+            android:background="#000000" />
+
+        <ImageView
+            android:id="@+id/img_guide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/ic_camera_tips" />
+
+        <TextView
+            android:id="@+id/tv_guide"
+            style="@style/text_common"
+            android:layout_below="@+id/img_guide"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dip"
+            android:gravity="center"
+            android:maxLines="2"
+            android:singleLine="false"
+            android:text="@string/tips_camera_monitor"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_18" />
+
+        <Button
+            android:id="@+id/btn_guide"
+            android:layout_width="150dip"
+            android:layout_height="45dip"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="20dip"
+            android:layout_marginRight="20dip"
+            android:background="@drawable/btn_tran_selector"
+            android:gravity="center"
+            android:text="@string/i_see"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/text_18" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
+
+
+

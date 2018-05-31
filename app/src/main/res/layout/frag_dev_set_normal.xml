@@ -1,0 +1,70 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.nicky.framework.slidinglayout.SlidingLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_window"
+        android:paddingBottom="15dp"
+        app:sliding_mode="both">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:paddingTop="15dip"
+            android:scrollbars="none">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <com.nicky.framework.tableview.UITableView
+                    android:id="@+id/tb_01"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dip" />
+
+                <com.nicky.framework.tableview.UITableView
+                    android:id="@+id/tb_02"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dip" />
+
+                <com.nicky.framework.tableview.UITableView
+                    android:id="@+id/tb_03"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dip" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dip"
+                    android:layout_weight="1.0" />
+
+                <TextView
+                    android:id="@+id/tv_dev_id"
+                    style="@style/text_common"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="15dip"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:textColor="@color/text_hint"
+                    android:textSize="@dimen/text_14" />
+
+
+            </LinearLayout>
+        </ScrollView>
+    </com.nicky.framework.slidinglayout.SlidingLayout>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/snackbar_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom" />
+</FrameLayout>

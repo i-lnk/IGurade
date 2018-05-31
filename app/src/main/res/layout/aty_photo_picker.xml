@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <include layout="@layout/common_toolbar" />
+
+
+    <RelativeLayout
+        android:id="@+id/ly_all"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_window"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_photos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center" />
+
+        <FrameLayout
+            android:id="@+id/ly_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.5"
+            android:background="#000000"
+            android:visibility="gone" />
+
+
+        <FrameLayout
+            android:id="@+id/ly_list"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_bucket_list_height"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:paddingBottom="4dip"
+            android:paddingTop="4dip"
+            android:translationY="@dimen/item_bucket_translation_y_height">
+
+            <ListView
+                android:id="@+id/lv_album"
+                style="@style/listView_common"
+                android:layout_width="match_parent"
+                android:scrollbars="vertical" />
+        </FrameLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ly_bucket"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:paddingLeft="10dip">
+
+            <Button
+                android:id="@+id/tv_bucket"
+                style="@style/Widget.AppCompat.ActionButton"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/item_bucket_menu_height"
+                android:gravity="center"
+                android:text="@string/album_all" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>
+
+
+

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!-- app基础颜色配置 -->
+    <color name="black">#FF000000</color>
+    <color name="red">#FFFF0000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="white_60">#99FFFFFF</color>
+    <color name="white_50">#80FFFFFF</color>
+    <color name="white_40">#66FFFFFF</color>
+    <color name="transparent">#00000000</color>
+
+    <!-- 主题色 -->
+    <color name="colorPrimary">#F5F5F5</color>
+    <color name="colorPrimaryDark">#F5F5F5</color>
+    <color name="colorAccent">#1F99C9</color>
+    <color name="colorControlNormal">#979797</color>
+
+
+    <!-- 背景色、item按下颜色 -->
+    <color name="bg_window">#E7EAF3</color>
+    <color name="bg_press">#D9F9F8</color> <!-- item 按下颜色 -->
+    <color name="bg_window_60tran_press">#996CCEFF</color><!-- item 按下颜色[透明色背景时需要] -->
+<!--    <color name="btn_common_normal">@color/btn_blue</color>
+    <color name="btn_common_disable">#4430b6ff</color>
+ <color name="bg_window_press">@color/colorAccent</color>
+<color name="bg_window_press">#F5F4F3</color>-->
+
+    <!-- 按钮颜色  -->
+    <color name="btn_common_press">@color/bg_press</color>
+
+
+    <color name="divider">#DDE0E8</color>
+    <color name="text_black">#1c1c1c</color>
+    <color name="text_black_light">#666666</color>
+<!--    <color name="text_hint">#979797</color>-->
+    <color name="text_hint">#777777</color>
+    <color name="text_gray">#7f7f7f</color>
+    <color name="text_red">#ec2929</color>
+
+    <color name="base_msg_bg">@color/bg_window</color>
+    <color name="base_msg_color">#ff999999</color>
+
+    <!-- 下拉刷新时、加载时，颜色值 -->
+    <color name="gplus_color_1">#27adff</color>
+    <color name="gplus_color_2">#3be3ff</color>
+
+    <integer-array name="gplus_colors">
+        <item>@color/gplus_color_1</item>
+        <item>@color/gplus_color_2</item>
+    </integer-array>
+
+
+    <!-- LIST BORDER COLOR -->
+    <color name="rounded_container_border">@color/divider</color>
+
+    <!-- ITEM BACKGROUND COLOR - STATE - DEFAULT -->
+    <color name="base_start_color_default">@color/white</color>
+    <color name="base_end_color_default">@color/white</color>
+
+    <!-- ITEM BACKGROUND COLOR - STATE - DISABLE -->
+    <color name="base_start_color_disable">@color/white_40</color>
+    <color name="base_end_color_disable">@color/white_40</color>
+
+    <!-- ITEM BACKGROUND COLOR - STATE - PRESSED -->
+    <color name="base_start_color_pressed">@color/bg_press</color>
+    <color name="base_end_color_pressed">@color/bg_press</color>
+
+    <!-- ITEM TEXT COLORS - STATES - PRESSED AND DEFAULT -->
+    <color name="text_color_default">@color/text_black</color>
+    <color name="text_color_pressed">@color/text_black</color>
+
+
+    <!-- Table View Colors -->
+    <color name="color_table_view_value">@color/text_hint</color>
+    <color name="color_table_view_name">@color/text_black</color>
+    <color name="color_table_view_desc">@color/text_hint</color>
+
+    <!-- PagerSlidingTabStrip -->
+    <color name="background_tab_pressed">#6633B5E5</color>
+
+    <!-- 二维码扫描相关颜色  -->
+    <color name="qr_lightgreen">#99CC33</color>
+    <color name="qr_green">#2eb44e</color>
+    <color name="viewfinder_frame">#ff000000</color>
+    <color name="viewfinder_laser">#ffff0000</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="result_view">#b0000000</color>
+
+
+    <color name="rippelColor">#FFFFFF</color>
+
+</resources>
