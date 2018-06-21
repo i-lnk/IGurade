@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">IGuarder</string>
+    <string name="pkg_name">com.rl.geye</string>
     <string name="app_running">Application is running</string>
     <string name="language_ch">Chinese</string>
     <string name="language_en">English</string>

@@ -2,15 +2,22 @@ package com.rl.geye.service;
 
 import android.app.IntentService;
 import android.app.Notification;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.v4.app.NotificationCompat;
+
 import com.google.firebase.messaging.FirebaseMessaging;
 import com.orhanobut.logger.Logger;
 import com.rl.commons.BaseApp;
 import com.rl.commons.utils.StringUtils;
 import com.rl.geye.MyApp;
+import com.rl.geye.R;
 import com.rl.geye.constants.Constants;
 import com.rl.geye.db.bean.EdwinDevice;
 import com.rl.geye.jpush.TagBean;
@@ -40,7 +47,6 @@ public class TaskWorkServer extends IntentService {
     public static boolean needSetTag = false; //需要设置
 
     private static List<String> pendingTasks = new ArrayList<String>();
-
 
     public TaskWorkServer() {
         this(SERVICE_NAME);
@@ -99,7 +105,6 @@ public class TaskWorkServer extends IntentService {
             needSetTag = false;
             new Thread(new RetryTagSetThread(errorCode == 6002 || errorCode == 6014)).start();
         }
-
     }
 
 
@@ -130,10 +135,46 @@ public class TaskWorkServer extends IntentService {
         }
     }
 
+    public void createNotification(){
+        String CHANNEL_ID = getString(R.string.pkg_name);
+        String CHANNEL_NAME = "PUSH REGIST SERVICE";
+        NotificationChannel notificationChannel = null;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            notificationChannel = new NotificationChannel(CHANNEL_ID,
+                    CHANNEL_NAME, NotificationManager.IMPORTANCE_HIGH);
+            notificationChannel.enableLights(true);
+            notificationChannel.setLightColor(Color.RED);
+            notificationChannel.setShowBadge(true);
+            notificationChannel.setLockscreenVisibility(Notification.VISIBILITY_PUBLIC);
+            NotificationManager manager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+            manager.createNotificationChannel(notificationChannel);
+        }
+
+        //使用兼容版本
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(this,CHANNEL_ID);
+        //设置状态栏的通知图标
+        builder.setSmallIcon(R.mipmap.app_geye);
+        //设置通知栏横条的图标
+        builder.setLargeIcon(BitmapFactory.decodeResource(getResources(), R.mipmap.app_geye));
+        //禁止用户点击删除按钮删除
+        builder.setAutoCancel(false);
+        //禁止滑动删除
+        builder.setOngoing(true);
+        //右上角的时间显示
+        builder.setShowWhen(true);
+        //设置通知栏的标题内容
+        builder.setContentTitle(getString(R.string.app_running));
+        builder.setContentText(getString(R.string.app_name));
+        //创建通知
+        Notification notification = builder.build();
+        //设置为前台服务
+        startForeground(NOTIFICATION_ID,notification);
+    }
+
     @Override
     public void onCreate() {
         super.onCreate();
-        startForeground(NOTIFICATION_ID, new Notification());
+        createNotification();
     }
 
     @Override
@@ -187,8 +228,6 @@ public class TaskWorkServer extends IntentService {
 //				addPendingTask(ACTION_SET_PUSH_TAG);
             TagUtil.getInstance().setTags(this, sequence, tagBean);
         }
-
-
     }
 
     public static class RetryTagSetThread implements Runnable {
@@ -209,6 +248,4 @@ public class TaskWorkServer extends IntentService {
             startService(MyApp.context(), ACTION_SET_PUSH_TAG);
         }
     }
-
-
 }

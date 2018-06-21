@@ -191,6 +191,17 @@ public class MainAty extends BaseMyAty implements
 
     }
 
+    public static String getVerName(Context context) {
+        String verName = "";
+        try {
+            verName = context.getPackageManager().
+                    getPackageInfo(context.getPackageName(), 0).versionName;
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
+        return verName;
+    }
+
     @Override
     protected void initViewsAndEvents() {
         if (Build.VERSION.SDK_INT >= 23) {
@@ -268,6 +279,7 @@ public class MainAty extends BaseMyAty implements
         }
         Map<String, String> params = new HashMap<>();
         params.put("appname", "Iguarder");
+        params.put("ver", getVerName(this));
         OkGo.<String>get(NetUrl.checkAppUpdate()).tag(this)
                 .params(params)
                 .execute(new StringCallback() {
@@ -854,20 +866,13 @@ public class MainAty extends BaseMyAty implements
         Intent intent = new Intent(Intent.ACTION_VIEW);
         //判断是否是AndroidN以及更高的版本
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-
-//          Uri contentUri = FileProvider.getUriForFile(mContext, BuildConfig.APPLICATION_ID + ".fileProvider", file);
-            Uri contentUri = Uri.fromFile(file);
-
+            Uri contentUri = FileProvider.getUriForFile(mContext, BuildConfig.APPLICATION_ID + ".fileProvider", file);
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
             intent.setDataAndType(contentUri, "application/vnd.android.package-archive");
-
         } else {
-
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-
             intent.setDataAndType(Uri.fromFile(file), "application/vnd.android.package-archive");
-
         }
 
         mContext.startActivity(intent);

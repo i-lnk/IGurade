@@ -4,6 +4,7 @@ import android.media.MediaPlayer;
 import android.opengl.GLSurfaceView;
 import android.os.Handler;
 import android.os.Message;
+import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
@@ -77,8 +78,6 @@ public class PlayBackAty extends BaseP2PAty {
             int recvCodec;
             int rate;
             switch (mDevice.getType()) {
-
-
                 case P2PConstants.DeviceType.BELL_BI_DIRECTIONAL:
                 case P2PConstants.DeviceType.BELL_UNIDIRECTIONAL:
                 case P2PConstants.DeviceType.IPC:
@@ -99,7 +98,7 @@ public class PlayBackAty extends BaseP2PAty {
                     rate = 8000;
                     break;
             }
-            Logger.i("StartPPPPLivestream: " + mVideo.getStart());
+            Log.e("replay",mVideo.getStart());
 
             if (BellVideoAty.getInstance() != null) {
                 Avapi.ClosePPPPLivestream(mDevice.getDevId());

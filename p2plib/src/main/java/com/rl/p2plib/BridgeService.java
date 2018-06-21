@@ -1,13 +1,18 @@
 package com.rl.p2plib;
 
 import android.annotation.SuppressLint;
+import android.app.Notification;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.app.Service;
 import android.content.Intent;
+import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.os.Binder;
 import android.os.IBinder;
 import android.support.annotation.NonNull;
+import android.support.v4.app.NotificationCompat;
 import android.util.Log;
-import android.widget.Toast;
 
 import com.edwintech.vdp.jni.Avapi;
 import com.rl.commons.BaseApp;
@@ -68,12 +73,10 @@ public class BridgeService extends Service implements P2PJniCallBack {
         return instance;
     }
 
-
     private HashMap<String, Integer> statusMap = new HashMap<>();
 
     private Lock devLock = new ReentrantLock(); //设备状态变化
 //	private List<EdwinDevice> mDeviceList;//数据库中的设备列表
-
 
 //	private PendingIntent mNotifContentIntent;
 //
@@ -91,7 +94,6 @@ public class BridgeService extends Service implements P2PJniCallBack {
 //	private Object[] mStartForegroundArgs = new Object[2];
 //	private Object[] mStopForegroundArgs = new Object[1];
 
-
     public int getDeviceStatus(String did) {
         int status = P2PConstants.P2PStatus.UNKNOWN;
         String key = did.replace("-", "");
@@ -100,7 +102,6 @@ public class BridgeService extends Service implements P2PJniCallBack {
         }
         return status;
     }
-
 
     /**
      * 服务是否已启动
@@ -111,7 +112,6 @@ public class BridgeService extends Service implements P2PJniCallBack {
 
     private static PushCallback mPushCallback;
     private static Class<?> mClickReceiverCls;
-
 
     /***** 推送处理 *****************/
     public static synchronized void init(Class<?> clickReceiverCls, PushCallback callback) {
@@ -125,7 +125,6 @@ public class BridgeService extends Service implements P2PJniCallBack {
         return new ControllerBinder();
     }
 
-
     /** */
     class ControllerBinder extends Binder {
         public BridgeService getBridgeService() {
@@ -133,32 +132,59 @@ public class BridgeService extends Service implements P2PJniCallBack {
         }
     }
 
+    public void createNotification(){
+        String CHANNEL_ID = getString(R.string.pkg_name);
+        String CHANNEL_NAME = "Channel One";
+        NotificationChannel notificationChannel = null;
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+            notificationChannel = new NotificationChannel(CHANNEL_ID,
+                    CHANNEL_NAME, NotificationManager.IMPORTANCE_HIGH);
+            notificationChannel.enableLights(true);
+            notificationChannel.setLightColor(Color.RED);
+            notificationChannel.setShowBadge(true);
+            notificationChannel.setLockscreenVisibility(Notification.VISIBILITY_PUBLIC);
+            NotificationManager manager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+            manager.createNotificationChannel(notificationChannel);
+        }
+
+        //使用兼容版本
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(this,CHANNEL_ID);
+        //设置状态栏的通知图标
+        builder.setSmallIcon(R.mipmap.app_geye);
+        //设置通知栏横条的图标
+        builder.setLargeIcon(BitmapFactory.decodeResource(getResources(), R.mipmap.app_geye));
+        //禁止用户点击删除按钮删除
+        builder.setAutoCancel(false);
+        //禁止滑动删除
+        builder.setOngoing(true);
+        //右上角的时间显示
+        builder.setShowWhen(true);
+        //设置通知栏的标题内容
+        builder.setContentTitle(getString(R.string.app_running));
+        //创建通知
+        Notification notification = builder.build();
+        //设置为前台服务
+        startForeground(0x0001,notification);
+    }
+
     @Override
     public void onCreate() {
         XLog.i(TAG, "------------------> onCreate() ");
         super.onCreate();
-//		BootstrapService.startForeground(this);
-        // start BootstrapService to remove notification
-//		Intent intent = new Intent(this, BootstrapService.class);
-//		startService(intent);
-
         statusMap = new HashMap<>();
         if (devLock == null)
             devLock = new ReentrantLock(); //设备状态变化
-//		initNotification();
         initP2P();
-//		startForegroundCompat(NOTIF_ID, mNotif);
         registerReceiver();
         instance = this;
+        createNotification();
 
         XLog.i(TAG, "------------------> onCreate() END");
     }
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-
-//		return super.onStartCommand(intent, flags, startId);
-        return START_STICKY;
+        return Service.START_STICKY;
     }
 
     @Override
@@ -243,7 +269,6 @@ public class BridgeService extends Service implements P2PJniCallBack {
 
 //	private RebootReceiver mRebootReceiver;
     private void registerReceiver() {
-
 //		if(!EventBus.getDefault().isRegistered(this))
 //		{
 //			EventBus.getDefault().register(this);
@@ -443,9 +468,9 @@ public class BridgeService extends Service implements P2PJniCallBack {
 //		}
 
         int pushType = StringUtils.toInt(dbType);
-        String msg = "------------->pushType ：" + pushType + " , did: " + did + " , dbDid : " + dbDid;
-        Toast.makeText(BridgeService.this, msg, Toast.LENGTH_LONG).show();
-        Log.i(TAG, "------------->pushType ：" + pushType + " , did: " + did + " , dbDid : " + dbDid);
+        // String msg = "------------->pushType ：" + pushType + " , did: " + did + " , dbDid : " + dbDid;
+        // Toast.makeText(BridgeService.this, msg, Toast.LENGTH_LONG).show();
+        Log.i(TAG, "MsgTyp ：" + pushType + " ,Remote DID: " + did + " , Locale DID : " + dbDid);
         synchronized (handleCallBack) {
             if (mP2PAppCallBack != null) {
                 for (SimpleP2PAppCallBack callback : mP2PAppCallBack) {
