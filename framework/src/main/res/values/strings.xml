@@ -21,6 +21,7 @@
     <string name="scan_failed">Scan failed</string>
     <string name="tips_warning">Warning</string>
     <string name="tips_sry_restart">Sorry, camera problems, you may need to reboot your camera</string>
+    <string name="tips_open_location_service">Click "OK" to start location service.</string>
 
 
 </resources>

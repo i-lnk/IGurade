@@ -134,6 +134,7 @@ public class HomeDevFrag extends BaseMyFrag implements View.OnClickListener, Bas
                         .addType(P2PConstants.DeviceType.IPC)
                         .addType(P2PConstants.DeviceType.IPCC)
                         .addType(P2PConstants.DeviceType.IPFC)
+                        .addType(P2PConstants.DeviceType.BELL_LTK6112C)
                         .addType(P2PConstants.DeviceType.BELL_BI_DIRECTIONAL)
                         .addType(P2PConstants.DeviceType.BELL_UNIDIRECTIONAL)
                         .addType(P2PConstants.DeviceType.CAT_SING_EYE)

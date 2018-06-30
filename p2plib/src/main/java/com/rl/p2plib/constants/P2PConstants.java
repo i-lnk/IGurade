@@ -26,6 +26,7 @@ public class P2PConstants {
         public static final int IPFC = 2;       // 鱼眼摄像机
         public static final int BELL_UNIDIRECTIONAL = 3;  // 单向门铃3
         public static final int BELL_BI_DIRECTIONAL = 4;  // 双向门铃
+        public static final int BELL_LTK6112C = 10;  // 双向门铃
         //        public static final int MZ = 5;  // 模组
         public static final int CAT_SING_EYE = 30;  //单向猫眼
         public static final int CAT_DOUBLE_EYE = 40;  //双向猫眼

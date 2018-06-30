@@ -1,9 +1,11 @@
 package com.rl.geye.util;
 
+import android.app.ActivityManager;
 import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -16,6 +18,8 @@ import android.os.Build;
 import android.os.PowerManager;
 import android.os.Vibrator;
 import android.support.annotation.NonNull;
+import android.text.TextUtils;
+import android.util.Log;
 
 import com.nicky.framework.component.MyTimeOutComponent;
 import com.nicky.framework.component.TimeOutComponent;
@@ -102,6 +106,28 @@ public class CallAlarmUtil implements TimeOutComponent {
         if (!EventBus.getDefault().isRegistered(this)) {
             EventBus.getDefault().register(this);
         }
+    }
+
+    /**
+     * 判断某个Activity 界面是否在前台
+     * @param context
+     * @param className 某个界面名称
+     * @return
+     */
+    public static boolean  isForeground(Context context, String className) {
+        if (context == null || TextUtils.isEmpty(className)) {
+            return false;
+        }
+
+        ActivityManager am = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
+        List<ActivityManager.RunningTaskInfo> list = am.getRunningTasks(1);
+        if (list != null && list.size() > 0) {
+            ComponentName cpn = list.get(0).topActivity;
+            if (className.equals(cpn.getClassName())) {
+                return true;
+            }
+        }
+        return false;
     }
 
     /* 1:懒汉式，静态工程方法，创建实例 */
@@ -241,16 +267,18 @@ public class CallAlarmUtil implements TimeOutComponent {
                 // if( pushType == P2PConstants.PushType.CALL ){
                 // && MainActivity.isReady()
                 if (!SystemValue.isCallRunning) {
-                    startRingAndVibrator(pushType);
                     postEdwinEvent(Constants.EdwinEventType.EVENT_FINISH_P2P_PAGE);
-                    SystemValue.isCallRunning = true;
                     Intent intent = new Intent(context, BellVideoAty.class);
                     intent.putExtra(Constants.BundleKey.KEY_DEV_INFO, dev);
                     intent.putExtra(Constants.BundleKey.KEY_PUSH_TYPE, pushType);
                     intent.putExtra(Constants.BundleKey.KEY_RECORD_ID, record.getId());
                     // intent.putExtra(Constants.BundleKey.KEY_TRIGGER_TIME, time);
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    context.startActivity(intent);
+                    try {
+                        context.startActivity(intent);
+                    }catch (Exception e){
+                        Log.e("CallAlarmUtil","create BellVideoAty failed.");
+                    }
                     createAlarmNotify(dev, pushType, record.getId());
                 } else {
                     Logger.t(TAG).e("-------------> BellVideoAty is Running....");
@@ -428,8 +456,9 @@ public class CallAlarmUtil implements TimeOutComponent {
 //        mAudioManager = ((AudioManager) mAppContext.getSystemService(AUDIO_SERVICE));
 //        isRingStarting = true;
         if (vibrateEnable) {
-            long[] pattern = {0, 1000, 1000};
+            long[] pattern = {1000, 1000};
             mVibrator.vibrate(pattern, 1);
+
         }
         new Thread(new Runnable() {
             @Override

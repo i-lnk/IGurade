@@ -2,7 +2,10 @@ package com.rl.geye.ui.aty;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.graphics.Bitmap;
@@ -14,6 +17,7 @@ import android.opengl.GLSurfaceView;
 import android.os.*;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.Toolbar;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
@@ -344,9 +348,38 @@ public class BellVideoAty extends BaseP2PAty implements CtrlLayout.AnimationList
         instance = this;
     }
 
+    private BroadcastReceiver homeAndLockReceiver = new BroadcastReceiver() {
+        String SYSTEM_REASON = "reason";
+        String SYSTEM_HOME_KEY = "homekey";
+
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            String action = intent.getAction();
+            if (action.equals(Intent.ACTION_CLOSE_SYSTEM_DIALOGS)) {
+                String reason = intent.getStringExtra(SYSTEM_REASON);
+                if (TextUtils.equals(reason, SYSTEM_HOME_KEY)) {
+                    //表示按了home键,程序到了后台
+                }
+            } else if (action.equals(Intent.ACTION_SCREEN_ON)) {
+                //屏幕亮了
+                Log.e("lock-", "--on");
+            } else if (action.equals(Intent.ACTION_SCREEN_OFF)) {
+                //屏幕黑了
+                Log.e("lock-", "--off");
+                hangUp();
+            }
+        }
+    };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         instance = this;
+
+        IntentFilter filter = new IntentFilter();
+        filter.addAction(Intent.ACTION_SCREEN_OFF);
+        filter.addAction(Intent.ACTION_CLOSE_SYSTEM_DIALOGS);
+        registerReceiver(homeAndLockReceiver,filter);
+
         super.onCreate(savedInstanceState);
     }
 
@@ -400,7 +433,9 @@ public class BellVideoAty extends BaseP2PAty implements CtrlLayout.AnimationList
 
         } else {
             startConnectTimeThread();
-//            startRingAndVibrator();
+            int pushType = fromIntent.getIntExtra(Constants.BundleKey.KEY_PUSH_TYPE,0);
+            CallAlarmUtil.getInstance().startRingAndVibrator(pushType);
+            SystemValue.isCallRunning = true;
             if (autoAnswer)
                 answer();
         }
@@ -610,7 +645,7 @@ public class BellVideoAty extends BaseP2PAty implements CtrlLayout.AnimationList
         hangUp();
         SystemValue.isCallRunning = false;
         instance = null;
-
+        unregisterReceiver(homeAndLockReceiver);
     }
 
     private void findViews() {
@@ -1492,6 +1527,7 @@ public class BellVideoAty extends BaseP2PAty implements CtrlLayout.AnimationList
                 int sendCodec;
                 int rate;
                 switch (mDevice.getType()) {
+                    case P2PConstants.DeviceType.BELL_LTK6112C:
                     case P2PConstants.DeviceType.BELL_BI_DIRECTIONAL:
                     case P2PConstants.DeviceType.BELL_UNIDIRECTIONAL:
                     case P2PConstants.DeviceType.IPC:

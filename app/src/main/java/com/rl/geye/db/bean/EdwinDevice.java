@@ -202,7 +202,8 @@ public class EdwinDevice implements Cloneable, Parcelable, IP2PDevice, MultiItem
 
     public boolean isBell() {
         return (type == P2PConstants.DeviceType.BELL_UNIDIRECTIONAL || type == P2PConstants.DeviceType.BELL_BI_DIRECTIONAL
-                || type == P2PConstants.DeviceType.CAT_DOUBLE_EYE || type == P2PConstants.DeviceType.CAT_SING_EYE);
+                || type == P2PConstants.DeviceType.CAT_DOUBLE_EYE || type == P2PConstants.DeviceType.CAT_SING_EYE
+                || type == P2PConstants.DeviceType.BELL_LTK6112C);
     }
 
     public boolean isOnline() {

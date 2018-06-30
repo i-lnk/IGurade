@@ -1496,6 +1496,7 @@ public class IpcVideoAty extends BaseP2PAty implements CtrlLayout.AnimationListe
                         int rate;
                         switch (mDevice.getType()) {
 
+                            case P2PConstants.DeviceType.BELL_LTK6112C:
                             case P2PConstants.DeviceType.BELL_BI_DIRECTIONAL:
                             case P2PConstants.DeviceType.BELL_UNIDIRECTIONAL:
                             case P2PConstants.DeviceType.IPC:

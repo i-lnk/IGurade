@@ -317,10 +317,6 @@
             android:name="com.rl.p2plib.BridgeService"
             android:stopWithTask="false" />
 
-        <service
-            android:name="com.rl.p2plib.BootstrapService"
-            android:stopWithTask="false" />
-
         <receiver android:name=".receiver.BootBroadcastReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />

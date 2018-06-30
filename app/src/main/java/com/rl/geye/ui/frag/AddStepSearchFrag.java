@@ -321,6 +321,7 @@ public class AddStepSearchFrag extends BaseDevAddFrag implements View.OnClickLis
                 devName = getString(R.string.type_ipfc) + didFirst2Str + didLast4Str;
                 break;
 
+            case P2PConstants.DeviceType.BELL_LTK6112C:
             case P2PConstants.DeviceType.BELL_BI_DIRECTIONAL:
                 devName = getString(R.string.type_bell_bi_directional) + didFirst2Str + didLast4Str;
                 break;

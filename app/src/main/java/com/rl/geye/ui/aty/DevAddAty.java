@@ -1,10 +1,15 @@
 package com.rl.geye.ui.aty;
 
 
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.location.LocationManager;
 import android.os.Bundle;
 import android.os.Handler;
+import android.provider.Settings;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -43,7 +48,6 @@ public class DevAddAty extends BaseMyAty implements
         AddStepChooseFrag.OnEvents,
         AddStepQRFrag.OnEvents,
         AddStepApTipsFrag.OnEvents {
-
 
     private final static int STEP_INIT = 0; // 初始页
     private final static int STEP_WIFI = 1; // 输入WIFI
@@ -131,6 +135,32 @@ public class DevAddAty extends BaseMyAty implements
     protected void initToolBar() {
         initCommonToolBar(toolbar);
         tvTitle.setText(R.string.add_dev);
+    }
+
+    private void checkGPSService() {
+        LocationManager locationManager = (LocationManager)getActivity().getSystemService(LOCATION_SERVICE);
+        boolean locationEnabled = locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
+        if(locationEnabled) return;
+
+        new AlertDialog.Builder(getActivity())
+                .setIcon(android.R.drawable.ic_dialog_info)
+                .setTitle(R.string.tips_warning)
+                .setMessage(R.string.tips_open_location_service)
+                .setNegativeButton(R.string.str_cancel, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        getActivity().finish();
+                    }
+                })
+                .setPositiveButton(R.string.str_ok, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        Intent intent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
+                        startActivityForResult(intent,887);
+                        dialogInterface.dismiss();
+                    }
+                })
+                .show();
     }
 
     @Override
@@ -445,7 +475,6 @@ public class DevAddAty extends BaseMyAty implements
         }
     }
 
-
     @Override
     public void gotoNextForQR() {
         replaceFragment(STEP_CONFIG_QR);
@@ -457,7 +486,6 @@ public class DevAddAty extends BaseMyAty implements
         replaceFragment(STEP_AP_WIFI);
         showStepView(STEP_AP_WIFI);
     }
-
 
     @Override
     public void gotoNextForApWifi(EdwinWifiInfo wifiInfo) {

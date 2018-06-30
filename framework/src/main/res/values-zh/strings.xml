@@ -22,5 +22,6 @@
     <string name="scan_failed">扫描失败</string>
     <string name="tips_warning">警告</string>
     <string name="tips_sry_restart">抱歉，相机出现问题，您可能需要重启相机</string>
+    <string name="tips_open_location_service">点击 "OK" 前往并打开定位服务.</string>
 
 </resources>
